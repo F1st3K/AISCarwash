@@ -12,9 +12,13 @@ namespace AISCarwash
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private string _mode;
+        public MainForm(string mode)
         {
+            _mode = mode;
+
             InitializeComponent();
+
         }
     }
 }

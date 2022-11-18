@@ -12,9 +12,12 @@ namespace AISCarwash
 {
     public partial class AutorizationForm : Form
     {
+        MySqlConnecter mySqlConnecter;
         public AutorizationForm()
         {
             InitializeComponent();
+            const string connectionString = "host='localhost';database='carwah_shema';uid='root';pwd='';charset=utf8;";
+            mySqlConnecter = new MySqlConnecter(connectionString);
             textPassword.PasswordChar = '•';
         }
 
@@ -25,7 +28,25 @@ namespace AISCarwash
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-            string query = "EXISTS(SELECT id FROM users WHERE id = 1)";
+            string column = "AccessRights";
+            string tableName = "users";
+            string condition = $"login = '{textLogin.Text}' AND password = '{textPassword.Text}'";
+            DataTable resultTable = mySqlConnecter.QueryReturnTable(column, tableName, condition);
+            if (resultTable.Rows.Count == 0)
+                MessageBox.Show("*неверный логин и/или пароль*", "неудачный вход", MessageBoxButtons.OK);
+            else
+            {
+                string mode = resultTable.Rows[0][0].ToString();
+                MessageBox.Show($"*Успех вы вошли как {mode}*", "неудачный вход", MessageBoxButtons.OK); 
+                LogIn(mode);
+            }   
+        }
+        private void LogIn(string mode)
+        {
+            this.Hide();
+            MainForm form = new MainForm(mode);
+            form.Show();
         }
     }
+
 }

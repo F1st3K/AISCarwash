@@ -21,9 +21,9 @@ namespace AISCarwash
             _connectionString = connectionString;
             _dbConection = new MySqlConnection(connectionString);
         }
-        public DataTable QueryReturnTable(string tableName)
+        public DataTable QueryReturnTable(string column, string tableName, string condition)
         {
-            string query = $"SELECT * FROM {tableName};";
+            string query = $"SELECT {column} FROM {tableName} WHERE {condition};";
             DataTable table = new DataTable();
             _dbConection.Open();
             try 
@@ -69,5 +69,6 @@ namespace AISCarwash
             }
             _dbConection.Close();
         }
+        
     }
 }
