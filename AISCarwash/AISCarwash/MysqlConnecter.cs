@@ -34,7 +34,7 @@ namespace AISCarwash
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "\n" + query, "Внимание!" + " - некоректное имя!!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(ex.Message + "\n" + query, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             _dbConection.Close();
             return table;
@@ -50,7 +50,7 @@ namespace AISCarwash
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "\n" + query, "Внимание!" + " - некоректное имя!!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(ex.Message + "\n" + query, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             _dbConection.Close();
         }
@@ -65,10 +65,25 @@ namespace AISCarwash
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "\n" + query, "Внимание!" + " - некоректное имя!!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(ex.Message + "\n" + query, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             _dbConection.Close();
         }
-        
+        public void QueryDeleteInTable(string table, string condition)
+        { 
+            string query = $"DELETE FROM {table} WHERE {condition};";
+            _dbConection.Open();
+            try
+            {
+                MySqlCommand command = new MySqlCommand(query, _dbConection);
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n" + query, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            _dbConection.Close();
+        }
+
     }
 }

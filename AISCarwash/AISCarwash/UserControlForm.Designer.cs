@@ -30,14 +30,14 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.tabContro = new System.Windows.Forms.TabControl();
             this.TabChange = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textPassword = new System.Windows.Forms.TextBox();
-            this.textLogin = new System.Windows.Forms.TextBox();
+            this.textChangePassword = new System.Windows.Forms.TextBox();
+            this.textChangeLogin = new System.Windows.Forms.TextBox();
             this.ChangeMode = new System.Windows.Forms.ComboBox();
             this.buttonChange = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.textCreateFullname = new System.Windows.Forms.TextBox();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabContro.SuspendLayout();
             this.TabChange.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -78,18 +78,19 @@
             this.BackToolStripMenuItem.Text = "Назад";
             this.BackToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1006, 468);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(0, 32);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 24;
+            this.dataGridView.Size = new System.Drawing.Size(1006, 468);
+            this.dataGridView.TabIndex = 1;
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // tabContro
             // 
@@ -107,8 +108,8 @@
             this.TabChange.Controls.Add(this.label4);
             this.TabChange.Controls.Add(this.label3);
             this.TabChange.Controls.Add(this.label2);
-            this.TabChange.Controls.Add(this.textPassword);
-            this.TabChange.Controls.Add(this.textLogin);
+            this.TabChange.Controls.Add(this.textChangePassword);
+            this.TabChange.Controls.Add(this.textChangeLogin);
             this.TabChange.Controls.Add(this.ChangeMode);
             this.TabChange.Controls.Add(this.buttonChange);
             this.TabChange.Controls.Add(this.label1);
@@ -148,19 +149,19 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "ФИО:";
             // 
-            // textPassword
+            // textChangePassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(12, 90);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(227, 31);
-            this.textPassword.TabIndex = 25;
+            this.textChangePassword.Location = new System.Drawing.Point(12, 90);
+            this.textChangePassword.Name = "textChangePassword";
+            this.textChangePassword.Size = new System.Drawing.Size(227, 31);
+            this.textChangePassword.TabIndex = 25;
             // 
-            // textLogin
+            // textChangeLogin
             // 
-            this.textLogin.Location = new System.Drawing.Point(12, 30);
-            this.textLogin.Name = "textLogin";
-            this.textLogin.Size = new System.Drawing.Size(227, 31);
-            this.textLogin.TabIndex = 24;
+            this.textChangeLogin.Location = new System.Drawing.Point(12, 30);
+            this.textChangeLogin.Name = "textChangeLogin";
+            this.textChangeLogin.Size = new System.Drawing.Size(227, 31);
+            this.textChangeLogin.TabIndex = 24;
             // 
             // ChangeMode
             // 
@@ -178,6 +179,7 @@
             this.buttonChange.TabIndex = 22;
             this.buttonChange.Text = "Редактировать";
             this.buttonChange.UseVisualStyleBackColor = true;
+            this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
             // label1
             // 
@@ -271,6 +273,7 @@
             this.buttonCreate.TabIndex = 31;
             this.buttonCreate.Text = "Добавить пользователя";
             this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // label8
             // 
@@ -296,6 +299,7 @@
             this.buttonDelete.TabIndex = 29;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // UserControlForm
             // 
@@ -303,7 +307,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 721);
             this.Controls.Add(this.tabContro);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MainMenuStrip = this.menuStrip1;
@@ -315,7 +319,7 @@
             this.Load += new System.EventHandler(this.UserControlForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.tabContro.ResumeLayout(false);
             this.TabChange.ResumeLayout(false);
             this.TabChange.PerformLayout();
@@ -330,14 +334,14 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem BackToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.TabControl tabContro;
         private System.Windows.Forms.TabPage TabChange;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textPassword;
-        private System.Windows.Forms.TextBox textLogin;
+        private System.Windows.Forms.TextBox textChangePassword;
+        private System.Windows.Forms.TextBox textChangeLogin;
         private System.Windows.Forms.ComboBox ChangeMode;
         private System.Windows.Forms.Button buttonChange;
         private System.Windows.Forms.Label label1;
