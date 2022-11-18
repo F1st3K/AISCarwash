@@ -22,5 +22,10 @@ namespace AISCarwash
         {
 
         }
+
+        private void buttonLogIn_Click(object sender, EventArgs e)
+        {
+            string query = "EXISTS(SELECT id FROM users WHERE id = 1)";
+        }
     }
 }
