@@ -100,6 +100,7 @@
             this.buttonUserControl.TabIndex = 6;
             this.buttonUserControl.Text = "Управление пользователями";
             this.buttonUserControl.UseVisualStyleBackColor = true;
+            this.buttonUserControl.Click += new System.EventHandler(this.buttonUserControl_Click);
             // 
             // MainForm
             // 

@@ -15,10 +15,10 @@ namespace AISCarwash
         private string _mode;
         public MainForm(string mode)
         {
+            InitializeComponent();
             if (mode == "user" || mode == "admin")
                 _mode = mode;
             else Close();
-            InitializeComponent();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -39,6 +39,13 @@ namespace AISCarwash
         {
             Close();
             Application.Exit();
+        }
+
+        private void buttonUserControl_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            UserControlForm form = new UserControlForm(_mode);
+            form.Show();
         }
     }
 }

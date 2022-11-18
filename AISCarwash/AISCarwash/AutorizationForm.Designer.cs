@@ -30,10 +30,10 @@
         {
             this.buttonLogIn = new System.Windows.Forms.Button();
             this.textLogin = new System.Windows.Forms.TextBox();
-            this.textPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.textPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonLogIn
@@ -52,13 +52,6 @@
             this.textLogin.Name = "textLogin";
             this.textLogin.Size = new System.Drawing.Size(236, 31);
             this.textLogin.TabIndex = 4;
-            // 
-            // textPassword
-            // 
-            this.textPassword.Location = new System.Drawing.Point(193, 272);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(236, 31);
-            this.textPassword.TabIndex = 6;
             // 
             // label1
             // 
@@ -88,15 +81,22 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Пароль:";
             // 
+            // textPassword
+            // 
+            this.textPassword.Location = new System.Drawing.Point(193, 272);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.Size = new System.Drawing.Size(236, 31);
+            this.textPassword.TabIndex = 10;
+            // 
             // AutorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 433);
+            this.Controls.Add(this.textPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textPassword);
             this.Controls.Add(this.textLogin);
             this.Controls.Add(this.buttonLogIn);
             this.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -113,9 +113,9 @@
 
         private System.Windows.Forms.Button buttonLogIn;
         private System.Windows.Forms.TextBox textLogin;
-        private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textPassword;
     }
 }

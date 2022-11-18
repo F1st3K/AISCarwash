@@ -12,12 +12,11 @@ namespace AISCarwash
 {
     public partial class AutorizationForm : Form
     {
-        MySqlConnecter mySqlConnecter;
+        private MySqlConnecter mySqlConnecter;
         public AutorizationForm()
         {
+            mySqlConnecter = new MySqlConnecter();
             InitializeComponent();
-            const string connectionString = "host='localhost';database='carwah_shema';uid='root';pwd='';charset=utf8;";
-            mySqlConnecter = new MySqlConnecter(connectionString);
             textPassword.PasswordChar = '•';
         }
 

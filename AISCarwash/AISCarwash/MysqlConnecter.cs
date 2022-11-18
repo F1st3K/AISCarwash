@@ -16,10 +16,10 @@ namespace AISCarwash
     {
         private MySqlConnection _dbConection;
         private string _connectionString;
-        public MySqlConnecter(string connectionString)
+        public MySqlConnecter()
         {
-            _connectionString = connectionString;
-            _dbConection = new MySqlConnection(connectionString);
+            _connectionString = "host='localhost';database='carwah_shema';uid='root';pwd='';charset=utf8;";
+            _dbConection = new MySqlConnection(_connectionString);
         }
         public DataTable QueryReturnTable(string column, string tableName, string condition)
         {
