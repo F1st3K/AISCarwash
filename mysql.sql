@@ -31,7 +31,7 @@ CREATE TABLE `listclients` (
   `Patronymic` varchar(15) DEFAULT NULL,
   `ModelCar` varchar(25) NOT NULL,
   PRIMARY KEY (`idClient`)
-) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,6 +97,37 @@ INSERT INTO `listwashers` VALUES (1,'Шестаков','Андрей','Богд�
 UNLOCK TABLES;
 
 --
+-- Table structure for table `provisionservice`
+--
+
+DROP TABLE IF EXISTS `provisionservice`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `provisionservice` (
+  `idProvisionService` int(11) NOT NULL AUTO_INCREMENT,
+  `idClient` int(11) NOT NULL,
+  `idService` int(11) NOT NULL,
+  `idWasher` int(11) NOT NULL,
+  PRIMARY KEY (`idProvisionService`),
+  KEY `idClient_idx` (`idClient`),
+  KEY `idService_idx` (`idService`),
+  KEY `idWasher_idx` (`idWasher`),
+  CONSTRAINT `idClient` FOREIGN KEY (`idClient`) REFERENCES `listclients` (`idClient`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `idService` FOREIGN KEY (`idService`) REFERENCES `listservices` (`idService`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `idWasher` FOREIGN KEY (`idWasher`) REFERENCES `listwashers` (`idWasher`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `provisionservice`
+--
+
+LOCK TABLES `provisionservice` WRITE;
+/*!40000 ALTER TABLE `provisionservice` DISABLE KEYS */;
+/*!40000 ALTER TABLE `provisionservice` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -108,6 +139,7 @@ CREATE TABLE `users` (
   `FullName` varchar(45) NOT NULL,
   `login` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
+  `AccessRights` enum('admin','user') NOT NULL,
   PRIMARY KEY (`idUsers`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -118,7 +150,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Иванов И.А.','admin','admin'),(2,'Костин Н.К.','niki','niki');
+INSERT INTO `users` VALUES (1,'Иванов И.А.','admin','admin','admin'),(2,'Костин','user','user','user');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -131,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-17 18:34:58
+-- Dump completed on 2022-11-18 20:49:18
