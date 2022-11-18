@@ -32,29 +32,32 @@
             this.buttonChange = new System.Windows.Forms.Button();
             this.buttonServies = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
+            this.buttonView = new System.Windows.Forms.Button();
+            this.buttonInfo = new System.Windows.Forms.Button();
+            this.buttonUserControl = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(93, 46);
+            this.buttonAdd.Location = new System.Drawing.Point(93, 424);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(297, 72);
             this.buttonAdd.TabIndex = 0;
-            this.buttonAdd.Text = "Добавление";
+            this.buttonAdd.Text = "Добавление в БД";
             this.buttonAdd.UseVisualStyleBackColor = true;
             // 
             // buttonChange
             // 
-            this.buttonChange.Location = new System.Drawing.Point(93, 156);
+            this.buttonChange.Location = new System.Drawing.Point(93, 502);
             this.buttonChange.Name = "buttonChange";
             this.buttonChange.Size = new System.Drawing.Size(297, 72);
             this.buttonChange.TabIndex = 1;
-            this.buttonChange.Text = "Редактирование";
+            this.buttonChange.Text = "Редактирование БД";
             this.buttonChange.UseVisualStyleBackColor = true;
             // 
             // buttonServies
             // 
-            this.buttonServies.Location = new System.Drawing.Point(93, 266);
+            this.buttonServies.Location = new System.Drawing.Point(93, 147);
             this.buttonServies.Name = "buttonServies";
             this.buttonServies.Size = new System.Drawing.Size(297, 72);
             this.buttonServies.TabIndex = 2;
@@ -63,28 +66,60 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(93, 602);
+            this.exit.Location = new System.Drawing.Point(93, 619);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(297, 72);
             this.exit.TabIndex = 3;
             this.exit.Text = "выход";
             this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // buttonView
+            // 
+            this.buttonView.Location = new System.Drawing.Point(93, 69);
+            this.buttonView.Name = "buttonView";
+            this.buttonView.Size = new System.Drawing.Size(297, 72);
+            this.buttonView.TabIndex = 4;
+            this.buttonView.Text = "Просмотр БД";
+            this.buttonView.UseVisualStyleBackColor = true;
+            // 
+            // buttonInfo
+            // 
+            this.buttonInfo.Location = new System.Drawing.Point(93, 225);
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.Size = new System.Drawing.Size(297, 72);
+            this.buttonInfo.TabIndex = 5;
+            this.buttonInfo.Text = "О разработчике";
+            this.buttonInfo.UseVisualStyleBackColor = true;
+            // 
+            // buttonUserControl
+            // 
+            this.buttonUserControl.Location = new System.Drawing.Point(93, 346);
+            this.buttonUserControl.Name = "buttonUserControl";
+            this.buttonUserControl.Size = new System.Drawing.Size(297, 72);
+            this.buttonUserControl.TabIndex = 6;
+            this.buttonUserControl.Text = "Управление пользователями";
+            this.buttonUserControl.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 703);
+            this.Controls.Add(this.buttonUserControl);
+            this.Controls.Add(this.buttonInfo);
+            this.Controls.Add(this.buttonView);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.buttonServies);
             this.Controls.Add(this.buttonChange);
             this.Controls.Add(this.buttonAdd);
             this.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(500, 750);
             this.MinimumSize = new System.Drawing.Size(500, 750);
             this.Name = "MainForm";
             this.Text = "АИС Автомойка";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -95,6 +130,9 @@
         private System.Windows.Forms.Button buttonChange;
         private System.Windows.Forms.Button buttonServies;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Button buttonView;
+        private System.Windows.Forms.Button buttonInfo;
+        private System.Windows.Forms.Button buttonUserControl;
     }
 }
 

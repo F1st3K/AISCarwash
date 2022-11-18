@@ -33,11 +33,11 @@ namespace AISCarwash
             string condition = $"login = '{textLogin.Text}' AND password = '{textPassword.Text}'";
             DataTable resultTable = mySqlConnecter.QueryReturnTable(column, tableName, condition);
             if (resultTable.Rows.Count == 0)
-                MessageBox.Show("*неверный логин и/или пароль*", "неудачный вход", MessageBoxButtons.OK);
+                MessageBox.Show("*неверный логин и/или пароль*", "неудачный вход", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 string mode = resultTable.Rows[0][0].ToString();
-                MessageBox.Show($"*Успех вы вошли как {mode}*", "неудачный вход", MessageBoxButtons.OK); 
+                MessageBox.Show($"*Успех вы вошли как {mode}*", "удачный вход", MessageBoxButtons.OK); 
                 LogIn(mode);
             }   
         }
