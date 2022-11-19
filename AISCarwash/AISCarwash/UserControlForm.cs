@@ -55,7 +55,7 @@ namespace AISCarwash
         {
             string tableName = "users";
             string column = "*";
-            string condition = "idUsers > 0";
+            string condition = $"EXISTS (SELECT {column} FROM {tableName})";
             dataGridView.DataSource = MySqlConnecter.QueryReturnTable(column, tableName, condition);
         }
 

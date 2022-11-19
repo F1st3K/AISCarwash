@@ -30,6 +30,7 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabWashers = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
             this.dateOBWasher = new System.Windows.Forms.DateTimePicker();
             this.textPatronymicWasher = new System.Windows.Forms.TextBox();
             this.buttonDelWasher = new System.Windows.Forms.Button();
@@ -40,27 +41,26 @@
             this.buttonChangeWasher = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabCliets = new System.Windows.Forms.TabPage();
-            this.buttonDelClient = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.buttonChangeClient = new System.Windows.Forms.Button();
-            this.textModelCarClient = new System.Windows.Forms.TextBox();
-            this.tabServices = new System.Windows.Forms.TabPage();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textPatronymicClient = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textSurnameClient = new System.Windows.Forms.TextBox();
             this.textNameClient = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.buttonDelClient = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonChangeClient = new System.Windows.Forms.Button();
+            this.textModelCarClient = new System.Windows.Forms.TextBox();
+            this.tabServices = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textPriceService = new System.Windows.Forms.TextBox();
             this.buttonDelService = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.buttonChangeService = new System.Windows.Forms.Button();
             this.textNameService = new System.Windows.Forms.TextBox();
-            this.textPriceService = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl.SuspendLayout();
             this.tabWashers.SuspendLayout();
             this.tabCliets.SuspendLayout();
@@ -79,6 +79,7 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(1006, 226);
             this.tabControl.TabIndex = 5;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabWashers
             // 
@@ -99,6 +100,15 @@
             this.tabWashers.TabIndex = 0;
             this.tabWashers.Text = "Сотрудники (мойщики)";
             this.tabWashers.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(263, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(140, 24);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Дата рождения:";
             // 
             // dateOBWasher
             // 
@@ -122,6 +132,7 @@
             this.buttonDelWasher.TabIndex = 29;
             this.buttonDelWasher.Text = "Удалить";
             this.buttonDelWasher.UseVisualStyleBackColor = true;
+            this.buttonDelWasher.Click += new System.EventHandler(this.buttonDelWasher_Click);
             // 
             // label4
             // 
@@ -163,6 +174,7 @@
             this.buttonChangeWasher.TabIndex = 22;
             this.buttonChangeWasher.Text = "Редактировать";
             this.buttonChangeWasher.UseVisualStyleBackColor = true;
+            this.buttonChangeWasher.Click += new System.EventHandler(this.buttonChangeWasher_Click);
             // 
             // label1
             // 
@@ -192,87 +204,6 @@
             this.tabCliets.TabIndex = 1;
             this.tabCliets.Text = "Клиенты";
             this.tabCliets.UseVisualStyleBackColor = true;
-            // 
-            // buttonDelClient
-            // 
-            this.buttonDelClient.Location = new System.Drawing.Point(266, 137);
-            this.buttonDelClient.Name = "buttonDelClient";
-            this.buttonDelClient.Size = new System.Drawing.Size(350, 45);
-            this.buttonDelClient.TabIndex = 29;
-            this.buttonDelClient.Text = "Удалить";
-            this.buttonDelClient.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(262, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 24);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Модель авто:";
-            // 
-            // buttonChangeClient
-            // 
-            this.buttonChangeClient.Location = new System.Drawing.Point(266, 76);
-            this.buttonChangeClient.Name = "buttonChangeClient";
-            this.buttonChangeClient.Size = new System.Drawing.Size(350, 45);
-            this.buttonChangeClient.TabIndex = 22;
-            this.buttonChangeClient.Text = "Редактировать";
-            this.buttonChangeClient.UseVisualStyleBackColor = true;
-            // 
-            // textModelCarClient
-            // 
-            this.textModelCarClient.Location = new System.Drawing.Point(266, 30);
-            this.textModelCarClient.Name = "textModelCarClient";
-            this.textModelCarClient.Size = new System.Drawing.Size(350, 31);
-            this.textModelCarClient.TabIndex = 18;
-            // 
-            // tabServices
-            // 
-            this.tabServices.Controls.Add(this.label9);
-            this.tabServices.Controls.Add(this.textPriceService);
-            this.tabServices.Controls.Add(this.buttonDelService);
-            this.tabServices.Controls.Add(this.label12);
-            this.tabServices.Controls.Add(this.buttonChangeService);
-            this.tabServices.Controls.Add(this.textNameService);
-            this.tabServices.Location = new System.Drawing.Point(4, 33);
-            this.tabServices.Name = "tabServices";
-            this.tabServices.Padding = new System.Windows.Forms.Padding(3);
-            this.tabServices.Size = new System.Drawing.Size(998, 189);
-            this.tabServices.TabIndex = 2;
-            this.tabServices.Text = "Услуги";
-            this.tabServices.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(0, 31);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
-            this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(1006, 468);
-            this.dataGridView.TabIndex = 4;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BackToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 28);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // BackToolStripMenuItem
-            // 
-            this.BackToolStripMenuItem.Name = "BackToolStripMenuItem";
-            this.BackToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
-            this.BackToolStripMenuItem.Text = "Назад";
-            this.BackToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
             // textPatronymicClient
             // 
@@ -322,14 +253,73 @@
             this.label6.TabIndex = 31;
             this.label6.Text = "Имя:";
             // 
-            // label8
+            // buttonDelClient
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(263, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(140, 24);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Дата рождения:";
+            this.buttonDelClient.Location = new System.Drawing.Point(266, 137);
+            this.buttonDelClient.Name = "buttonDelClient";
+            this.buttonDelClient.Size = new System.Drawing.Size(350, 45);
+            this.buttonDelClient.TabIndex = 29;
+            this.buttonDelClient.Text = "Удалить";
+            this.buttonDelClient.UseVisualStyleBackColor = true;
+            this.buttonDelClient.Click += new System.EventHandler(this.buttonDelClient_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(262, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 24);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Модель авто:";
+            // 
+            // buttonChangeClient
+            // 
+            this.buttonChangeClient.Location = new System.Drawing.Point(266, 76);
+            this.buttonChangeClient.Name = "buttonChangeClient";
+            this.buttonChangeClient.Size = new System.Drawing.Size(350, 45);
+            this.buttonChangeClient.TabIndex = 22;
+            this.buttonChangeClient.Text = "Редактировать";
+            this.buttonChangeClient.UseVisualStyleBackColor = true;
+            this.buttonChangeClient.Click += new System.EventHandler(this.buttonChangeClient_Click);
+            // 
+            // textModelCarClient
+            // 
+            this.textModelCarClient.Location = new System.Drawing.Point(266, 30);
+            this.textModelCarClient.Name = "textModelCarClient";
+            this.textModelCarClient.Size = new System.Drawing.Size(350, 31);
+            this.textModelCarClient.TabIndex = 18;
+            // 
+            // tabServices
+            // 
+            this.tabServices.Controls.Add(this.label9);
+            this.tabServices.Controls.Add(this.textPriceService);
+            this.tabServices.Controls.Add(this.buttonDelService);
+            this.tabServices.Controls.Add(this.label12);
+            this.tabServices.Controls.Add(this.buttonChangeService);
+            this.tabServices.Controls.Add(this.textNameService);
+            this.tabServices.Location = new System.Drawing.Point(4, 33);
+            this.tabServices.Name = "tabServices";
+            this.tabServices.Padding = new System.Windows.Forms.Padding(3);
+            this.tabServices.Size = new System.Drawing.Size(998, 189);
+            this.tabServices.TabIndex = 2;
+            this.tabServices.Text = "Услуги";
+            this.tabServices.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 114);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 24);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "Цена:";
+            // 
+            // textPriceService
+            // 
+            this.textPriceService.Location = new System.Drawing.Point(12, 141);
+            this.textPriceService.Name = "textPriceService";
+            this.textPriceService.Size = new System.Drawing.Size(148, 31);
+            this.textPriceService.TabIndex = 41;
             // 
             // buttonDelService
             // 
@@ -339,6 +329,7 @@
             this.buttonDelService.TabIndex = 40;
             this.buttonDelService.Text = "Удалить";
             this.buttonDelService.UseVisualStyleBackColor = true;
+            this.buttonDelService.Click += new System.EventHandler(this.buttonDelService_Click);
             // 
             // label12
             // 
@@ -357,6 +348,7 @@
             this.buttonChangeService.TabIndex = 38;
             this.buttonChangeService.Text = "Редактировать";
             this.buttonChangeService.UseVisualStyleBackColor = true;
+            this.buttonChangeService.Click += new System.EventHandler(this.buttonChangeService_Click);
             // 
             // textNameService
             // 
@@ -365,21 +357,38 @@
             this.textNameService.Size = new System.Drawing.Size(374, 31);
             this.textNameService.TabIndex = 37;
             // 
-            // textPriceService
+            // dataGridView
             // 
-            this.textPriceService.Location = new System.Drawing.Point(12, 141);
-            this.textPriceService.Name = "textPriceService";
-            this.textPriceService.Size = new System.Drawing.Size(148, 31);
-            this.textPriceService.TabIndex = 41;
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(0, 31);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 24;
+            this.dataGridView.Size = new System.Drawing.Size(1006, 468);
+            this.dataGridView.TabIndex = 4;
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
+            this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             // 
-            // label9
+            // menuStrip1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 114);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 24);
-            this.label9.TabIndex = 42;
-            this.label9.Text = "Цена:";
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BackToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 28);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // BackToolStripMenuItem
+            // 
+            this.BackToolStripMenuItem.Name = "BackToolStripMenuItem";
+            this.BackToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.BackToolStripMenuItem.Text = "Назад";
+            this.BackToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
             // ChangeForm
             // 
@@ -395,6 +404,7 @@
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "ChangeForm";
             this.Text = "ChangeForm";
+            this.Load += new System.EventHandler(this.ChangeForm_Load);
             this.tabControl.ResumeLayout(false);
             this.tabWashers.ResumeLayout(false);
             this.tabWashers.PerformLayout();

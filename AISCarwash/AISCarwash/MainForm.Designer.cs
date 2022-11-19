@@ -55,6 +55,7 @@
             this.buttonChange.TabIndex = 1;
             this.buttonChange.Text = "Редактирование БД";
             this.buttonChange.UseVisualStyleBackColor = true;
+            this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
             // buttonServies
             // 
