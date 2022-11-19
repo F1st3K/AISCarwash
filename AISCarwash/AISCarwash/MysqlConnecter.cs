@@ -12,16 +12,12 @@ using System.Windows.Forms;
 
 namespace AISCarwash
 {
-    internal class MySqlConnecter
+    static class MySqlConnecter
     {
-        private MySqlConnection _dbConection;
-        private string _connectionString;
-        public MySqlConnecter()
-        {
-            _connectionString = "host='localhost';database='carwah_shema';uid='root';pwd='';charset=utf8;";
-            _dbConection = new MySqlConnection(_connectionString);
-        }
-        public DataTable QueryReturnTable(string column, string tableName, string condition)
+        private static string _connectionString = "host='localhost';database='carwah_shema';uid='root';pwd='';charset=utf8;";
+        private static MySqlConnection _dbConection = new MySqlConnection(_connectionString);
+        
+        public static DataTable QueryReturnTable(string column, string tableName, string condition)
         {
             string query = $"SELECT {column} FROM {tableName} WHERE {condition};";
             DataTable table = new DataTable();
@@ -39,7 +35,7 @@ namespace AISCarwash
             _dbConection.Close();
             return table;
         }
-        public void QueryAddInTable(string table, string values)
+        public static void QueryAddInTable(string table, string values)
         {
             string query = $"INSERT INTO {table} VALUES ({values});";
             _dbConection.Open();
@@ -54,7 +50,7 @@ namespace AISCarwash
             }
             _dbConection.Close();
         }
-        public void QueryChangeInTable(string table, string values, string condition)
+        public static void QueryChangeInTable(string table, string values, string condition)
         {
             string query = $"UPDATE {table} SET {values} WHERE {condition};";
             _dbConection.Open();
@@ -69,7 +65,7 @@ namespace AISCarwash
             }
             _dbConection.Close();
         }
-        public void QueryDeleteInTable(string table, string condition)
+        public static void QueryDeleteInTable(string table, string condition)
         { 
             string query = $"DELETE FROM {table} WHERE {condition};";
             _dbConection.Open();

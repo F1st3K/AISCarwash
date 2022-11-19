@@ -14,11 +14,9 @@ namespace AISCarwash
     {
         private string _mode;
         private DataGridViewRow _currentRow;
-        private MySqlConnecter mySqlConnecter;
         public UserControlForm(string mode)
         {
             _mode = mode;
-            mySqlConnecter = new MySqlConnecter();
             InitializeComponent();
         }
 
@@ -57,7 +55,7 @@ namespace AISCarwash
             string tableName = "users";
             string column = "*";
             string condition = "idUsers > 0";
-            dataGridView.DataSource = mySqlConnecter.QueryReturnTable(column, tableName, condition);
+            dataGridView.DataSource = MySqlConnecter.QueryReturnTable(column, tableName, condition);
         }
 
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -82,7 +80,7 @@ namespace AISCarwash
                 $"{_currentRow.Cells[3].OwningColumn.Name} = '{textChangePassword.Text}', " +
                 $"{_currentRow.Cells[4].OwningColumn.Name} = '{ChangeMode.Text}'";
             string condition = $"{_currentRow.Cells[0].OwningColumn.Name} = {_currentRow.Cells[0].Value.ToString()}";
-            mySqlConnecter.QueryChangeInTable(table, values, condition);
+            MySqlConnecter.QueryChangeInTable(table, values, condition);
             UpdateGridView();
             ResetChange();
         }
@@ -91,7 +89,7 @@ namespace AISCarwash
         {
             string table = "users";
             string values = $"DEFAULT, '{textCreateFullname.Text}', '{textCreateLogin.Text}', '{textCreatePassword.Text}', '{CreateMode.Text}'";
-            mySqlConnecter.QueryAddInTable(table, values);
+            MySqlConnecter.QueryAddInTable(table, values);
             UpdateGridView();
             ResetCreate();
         }
@@ -108,7 +106,7 @@ namespace AISCarwash
         {
             string table = "users";
             string condition = $"{_currentRow.Cells[0].OwningColumn.Name} = {_currentRow.Cells[0].Value.ToString()}";
-            mySqlConnecter.QueryDeleteInTable(table, condition);
+            MySqlConnecter.QueryDeleteInTable(table, condition);
             UpdateGridView();
             ResetChange();
         }

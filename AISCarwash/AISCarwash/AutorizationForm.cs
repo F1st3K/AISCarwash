@@ -12,10 +12,8 @@ namespace AISCarwash
 {
     public partial class AutorizationForm : Form
     {
-        private MySqlConnecter mySqlConnecter;
         public AutorizationForm()
         {
-            mySqlConnecter = new MySqlConnecter();
             InitializeComponent();
             textPassword.PasswordChar = '•';
         }
@@ -30,7 +28,7 @@ namespace AISCarwash
             string column = "AccessRights";
             string tableName = "users";
             string condition = $"login = '{textLogin.Text}' AND password = '{textPassword.Text}'";
-            DataTable resultTable = mySqlConnecter.QueryReturnTable(column, tableName, condition);
+            DataTable resultTable = MySqlConnecter.QueryReturnTable(column, tableName, condition);
             if (resultTable.Rows.Count == 0)
                 MessageBox.Show("*неверный логин и/или пароль*", "неудачный вход", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
