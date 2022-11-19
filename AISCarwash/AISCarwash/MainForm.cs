@@ -51,7 +51,9 @@ namespace AISCarwash
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
+            AddForm form = new AddForm(_mode);
+            form.Show();
         }
 
         private void buttonChange_Click(object sender, EventArgs e)

@@ -366,6 +366,7 @@
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "AddForm";
             this.Text = "AddForm";
+            this.Load += new System.EventHandler(this.AddForm_Load);
             this.tabControl.ResumeLayout(false);
             this.tabWashers.ResumeLayout(false);
             this.tabWashers.PerformLayout();
