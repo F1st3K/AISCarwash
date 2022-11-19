@@ -31,8 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.tabContro = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.TabChange = new System.Windows.Forms.TabPage();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,10 +53,9 @@
             this.buttonCreate = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textCreateFullname = new System.Windows.Forms.TextBox();
-            this.buttonDelete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.tabContro.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.TabChange.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             this.BackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,15 +92,15 @@
             this.dataGridView.TabIndex = 1;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
-            // tabContro
+            // tabControl
             // 
-            this.tabContro.Controls.Add(this.TabChange);
-            this.tabContro.Controls.Add(this.tabPage2);
-            this.tabContro.Location = new System.Drawing.Point(0, 496);
-            this.tabContro.Name = "tabContro";
-            this.tabContro.SelectedIndex = 0;
-            this.tabContro.Size = new System.Drawing.Size(1006, 226);
-            this.tabContro.TabIndex = 2;
+            this.tabControl.Controls.Add(this.TabChange);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Location = new System.Drawing.Point(0, 496);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1006, 226);
+            this.tabControl.TabIndex = 2;
             // 
             // TabChange
             // 
@@ -121,6 +121,16 @@
             this.TabChange.TabIndex = 0;
             this.TabChange.Text = "Редактирование/Удаление";
             this.TabChange.UseVisualStyleBackColor = true;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(266, 137);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(350, 45);
+            this.buttonDelete.TabIndex = 29;
+            this.buttonDelete.Text = "Удалить";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // label4
             // 
@@ -291,22 +301,12 @@
             this.textCreateFullname.Size = new System.Drawing.Size(350, 31);
             this.textCreateFullname.TabIndex = 29;
             // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Location = new System.Drawing.Point(266, 137);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(350, 45);
-            this.buttonDelete.TabIndex = 29;
-            this.buttonDelete.Text = "Удалить";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
-            // 
             // UserControlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 721);
-            this.Controls.Add(this.tabContro);
+            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -320,7 +320,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.tabContro.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.TabChange.ResumeLayout(false);
             this.TabChange.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -335,7 +335,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem BackToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.TabControl tabContro;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage TabChange;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

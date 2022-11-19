@@ -45,6 +45,7 @@
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "Добавление в БД";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonChange
             // 

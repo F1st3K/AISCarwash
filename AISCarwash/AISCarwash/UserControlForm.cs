@@ -18,6 +18,7 @@ namespace AISCarwash
         {
             _mode = mode;
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void UserControlForm_Load(object sender, EventArgs e)

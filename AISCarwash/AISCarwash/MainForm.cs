@@ -16,6 +16,7 @@ namespace AISCarwash
         public MainForm(string mode)
         {
             InitializeComponent();
+            this.CenterToScreen();
             if (mode == "user" || mode == "admin")
                 _mode = mode;
             else Close();
@@ -45,6 +46,13 @@ namespace AISCarwash
         {
             this.Close();
             UserControlForm form = new UserControlForm(_mode);
+            form.Show();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ChangeForm form = new ChangeForm(_mode);
             form.Show();
         }
     }

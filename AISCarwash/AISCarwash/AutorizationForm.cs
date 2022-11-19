@@ -15,6 +15,7 @@ namespace AISCarwash
         public AutorizationForm()
         {
             InitializeComponent();
+            this.CenterToScreen();
             textPassword.PasswordChar = '•';
         }
 
