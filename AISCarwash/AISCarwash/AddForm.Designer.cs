@@ -32,36 +32,37 @@
             this.tabWashers = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.dateOBWasher = new System.Windows.Forms.DateTimePicker();
-            this.textPatronymicWasher = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textSurnameWasher = new System.Windows.Forms.TextBox();
-            this.textNameWasher = new System.Windows.Forms.TextBox();
             this.buttonAddWasher = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabCliets = new System.Windows.Forms.TabPage();
-            this.textPatronymicClient = new System.Windows.Forms.TextBox();
+            this.textPatronymicClient = new System.Windows.Forms.MaskedTextBox();
+            this.textSurnameClient = new System.Windows.Forms.MaskedTextBox();
+            this.textNameClient = new System.Windows.Forms.MaskedTextBox();
+            this.textModelCarClient = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textSurnameClient = new System.Windows.Forms.TextBox();
-            this.textNameClient = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonAddClient = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textModelCarClient = new System.Windows.Forms.TextBox();
             this.tabServices = new System.Windows.Forms.TabPage();
+            this.textNameService = new System.Windows.Forms.MaskedTextBox();
+            this.textPriceService = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
-            this.textPriceService = new System.Windows.Forms.TextBox();
             this.buttonAddService = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.textNameService = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.textNameWasher = new System.Windows.Forms.MaskedTextBox();
+            this.textSurnameWasher = new System.Windows.Forms.MaskedTextBox();
+            this.textPatronymicWasher = new System.Windows.Forms.MaskedTextBox();
             this.tabControl.SuspendLayout();
             this.tabWashers.SuspendLayout();
             this.tabCliets.SuspendLayout();
             this.tabServices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textPriceService)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -80,13 +81,13 @@
             // 
             // tabWashers
             // 
-            this.tabWashers.Controls.Add(this.label8);
-            this.tabWashers.Controls.Add(this.dateOBWasher);
             this.tabWashers.Controls.Add(this.textPatronymicWasher);
-            this.tabWashers.Controls.Add(this.label4);
-            this.tabWashers.Controls.Add(this.label3);
             this.tabWashers.Controls.Add(this.textSurnameWasher);
             this.tabWashers.Controls.Add(this.textNameWasher);
+            this.tabWashers.Controls.Add(this.label8);
+            this.tabWashers.Controls.Add(this.dateOBWasher);
+            this.tabWashers.Controls.Add(this.label4);
+            this.tabWashers.Controls.Add(this.label3);
             this.tabWashers.Controls.Add(this.buttonAddWasher);
             this.tabWashers.Controls.Add(this.label1);
             this.tabWashers.Location = new System.Drawing.Point(4, 33);
@@ -109,16 +110,12 @@
             // dateOBWasher
             // 
             this.dateOBWasher.Location = new System.Drawing.Point(364, 30);
+            this.dateOBWasher.MaxDate = new System.DateTime(2022, 11, 19, 0, 0, 0, 0);
+            this.dateOBWasher.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateOBWasher.Name = "dateOBWasher";
             this.dateOBWasher.Size = new System.Drawing.Size(350, 31);
             this.dateOBWasher.TabIndex = 31;
-            // 
-            // textPatronymicWasher
-            // 
-            this.textPatronymicWasher.Location = new System.Drawing.Point(105, 150);
-            this.textPatronymicWasher.Name = "textPatronymicWasher";
-            this.textPatronymicWasher.Size = new System.Drawing.Size(227, 31);
-            this.textPatronymicWasher.TabIndex = 30;
+            this.dateOBWasher.Value = new System.DateTime(2022, 11, 19, 0, 0, 0, 0);
             // 
             // label4
             // 
@@ -137,20 +134,6 @@
             this.label3.Size = new System.Drawing.Size(89, 24);
             this.label3.TabIndex = 27;
             this.label3.Text = "Фамилия:";
-            // 
-            // textSurnameWasher
-            // 
-            this.textSurnameWasher.Location = new System.Drawing.Point(105, 90);
-            this.textSurnameWasher.Name = "textSurnameWasher";
-            this.textSurnameWasher.Size = new System.Drawing.Size(227, 31);
-            this.textSurnameWasher.TabIndex = 25;
-            // 
-            // textNameWasher
-            // 
-            this.textNameWasher.Location = new System.Drawing.Point(105, 30);
-            this.textNameWasher.Name = "textNameWasher";
-            this.textNameWasher.Size = new System.Drawing.Size(227, 31);
-            this.textNameWasher.TabIndex = 24;
             // 
             // buttonAddWasher
             // 
@@ -174,14 +157,14 @@
             // tabCliets
             // 
             this.tabCliets.Controls.Add(this.textPatronymicClient);
-            this.tabCliets.Controls.Add(this.label2);
-            this.tabCliets.Controls.Add(this.label5);
             this.tabCliets.Controls.Add(this.textSurnameClient);
             this.tabCliets.Controls.Add(this.textNameClient);
+            this.tabCliets.Controls.Add(this.textModelCarClient);
+            this.tabCliets.Controls.Add(this.label2);
+            this.tabCliets.Controls.Add(this.label5);
             this.tabCliets.Controls.Add(this.label6);
             this.tabCliets.Controls.Add(this.buttonAddClient);
             this.tabCliets.Controls.Add(this.label7);
-            this.tabCliets.Controls.Add(this.textModelCarClient);
             this.tabCliets.Location = new System.Drawing.Point(4, 33);
             this.tabCliets.Name = "tabCliets";
             this.tabCliets.Padding = new System.Windows.Forms.Padding(3);
@@ -192,10 +175,35 @@
             // 
             // textPatronymicClient
             // 
-            this.textPatronymicClient.Location = new System.Drawing.Point(105, 150);
+            this.textPatronymicClient.Location = new System.Drawing.Point(105, 152);
+            this.textPatronymicClient.Mask = "?????????????????????????";
             this.textPatronymicClient.Name = "textPatronymicClient";
             this.textPatronymicClient.Size = new System.Drawing.Size(227, 31);
-            this.textPatronymicClient.TabIndex = 36;
+            this.textPatronymicClient.TabIndex = 40;
+            // 
+            // textSurnameClient
+            // 
+            this.textSurnameClient.Location = new System.Drawing.Point(105, 90);
+            this.textSurnameClient.Mask = "L??????????????";
+            this.textSurnameClient.Name = "textSurnameClient";
+            this.textSurnameClient.Size = new System.Drawing.Size(227, 31);
+            this.textSurnameClient.TabIndex = 39;
+            // 
+            // textNameClient
+            // 
+            this.textNameClient.Location = new System.Drawing.Point(105, 30);
+            this.textNameClient.Mask = "L??????????????";
+            this.textNameClient.Name = "textNameClient";
+            this.textNameClient.Size = new System.Drawing.Size(227, 31);
+            this.textNameClient.TabIndex = 38;
+            // 
+            // textModelCarClient
+            // 
+            this.textModelCarClient.Location = new System.Drawing.Point(363, 30);
+            this.textModelCarClient.Mask = "L????????????????????????";
+            this.textModelCarClient.Name = "textModelCarClient";
+            this.textModelCarClient.Size = new System.Drawing.Size(350, 31);
+            this.textModelCarClient.TabIndex = 37;
             // 
             // label2
             // 
@@ -214,20 +222,6 @@
             this.label5.Size = new System.Drawing.Size(89, 24);
             this.label5.TabIndex = 34;
             this.label5.Text = "Фамилия:";
-            // 
-            // textSurnameClient
-            // 
-            this.textSurnameClient.Location = new System.Drawing.Point(105, 90);
-            this.textSurnameClient.Name = "textSurnameClient";
-            this.textSurnameClient.Size = new System.Drawing.Size(227, 31);
-            this.textSurnameClient.TabIndex = 33;
-            // 
-            // textNameClient
-            // 
-            this.textNameClient.Location = new System.Drawing.Point(105, 30);
-            this.textNameClient.Name = "textNameClient";
-            this.textNameClient.Size = new System.Drawing.Size(227, 31);
-            this.textNameClient.TabIndex = 32;
             // 
             // label6
             // 
@@ -257,20 +251,13 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Модель авто:";
             // 
-            // textModelCarClient
-            // 
-            this.textModelCarClient.Location = new System.Drawing.Point(363, 29);
-            this.textModelCarClient.Name = "textModelCarClient";
-            this.textModelCarClient.Size = new System.Drawing.Size(350, 31);
-            this.textModelCarClient.TabIndex = 18;
-            // 
             // tabServices
             // 
-            this.tabServices.Controls.Add(this.label9);
+            this.tabServices.Controls.Add(this.textNameService);
             this.tabServices.Controls.Add(this.textPriceService);
+            this.tabServices.Controls.Add(this.label9);
             this.tabServices.Controls.Add(this.buttonAddService);
             this.tabServices.Controls.Add(this.label12);
-            this.tabServices.Controls.Add(this.textNameService);
             this.tabServices.Location = new System.Drawing.Point(4, 33);
             this.tabServices.Name = "tabServices";
             this.tabServices.Padding = new System.Windows.Forms.Padding(3);
@@ -278,6 +265,26 @@
             this.tabServices.TabIndex = 2;
             this.tabServices.Text = "Услуги";
             this.tabServices.UseVisualStyleBackColor = true;
+            // 
+            // textNameService
+            // 
+            this.textNameService.Location = new System.Drawing.Point(325, 32);
+            this.textNameService.Mask = "L????????????????????????????????????????????";
+            this.textNameService.Name = "textNameService";
+            this.textNameService.Size = new System.Drawing.Size(374, 31);
+            this.textNameService.TabIndex = 44;
+            // 
+            // textPriceService
+            // 
+            this.textPriceService.Location = new System.Drawing.Point(325, 95);
+            this.textPriceService.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.textPriceService.Name = "textPriceService";
+            this.textPriceService.Size = new System.Drawing.Size(120, 31);
+            this.textPriceService.TabIndex = 43;
             // 
             // label9
             // 
@@ -287,13 +294,6 @@
             this.label9.Size = new System.Drawing.Size(57, 24);
             this.label9.TabIndex = 42;
             this.label9.Text = "Цена:";
-            // 
-            // textPriceService
-            // 
-            this.textPriceService.Location = new System.Drawing.Point(325, 93);
-            this.textPriceService.Name = "textPriceService";
-            this.textPriceService.Size = new System.Drawing.Size(148, 31);
-            this.textPriceService.TabIndex = 41;
             // 
             // buttonAddService
             // 
@@ -314,13 +314,6 @@
             this.label12.TabIndex = 39;
             this.label12.Text = "Наименование услуги:";
             // 
-            // textNameService
-            // 
-            this.textNameService.Location = new System.Drawing.Point(325, 30);
-            this.textNameService.Name = "textNameService";
-            this.textNameService.Size = new System.Drawing.Size(374, 31);
-            this.textNameService.TabIndex = 37;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -328,7 +321,7 @@
             this.BackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 30);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -352,6 +345,30 @@
             this.dataGridView.Size = new System.Drawing.Size(1006, 468);
             this.dataGridView.TabIndex = 8;
             // 
+            // textNameWasher
+            // 
+            this.textNameWasher.Location = new System.Drawing.Point(105, 30);
+            this.textNameWasher.Mask = "L??????????????";
+            this.textNameWasher.Name = "textNameWasher";
+            this.textNameWasher.Size = new System.Drawing.Size(227, 31);
+            this.textNameWasher.TabIndex = 33;
+            // 
+            // textSurnameWasher
+            // 
+            this.textSurnameWasher.Location = new System.Drawing.Point(105, 92);
+            this.textSurnameWasher.Mask = "L???????????????";
+            this.textSurnameWasher.Name = "textSurnameWasher";
+            this.textSurnameWasher.Size = new System.Drawing.Size(227, 31);
+            this.textSurnameWasher.TabIndex = 34;
+            // 
+            // textPatronymicWasher
+            // 
+            this.textPatronymicWasher.Location = new System.Drawing.Point(105, 152);
+            this.textPatronymicWasher.Mask = "?????????????????????????";
+            this.textPatronymicWasher.Name = "textPatronymicWasher";
+            this.textPatronymicWasher.Size = new System.Drawing.Size(227, 31);
+            this.textPatronymicWasher.TabIndex = 35;
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
@@ -361,7 +378,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl);
             this.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1024, 768);
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "AddForm";
@@ -374,6 +391,7 @@
             this.tabCliets.PerformLayout();
             this.tabServices.ResumeLayout(false);
             this.tabServices.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textPriceService)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -388,31 +406,31 @@
         private System.Windows.Forms.TabPage tabWashers;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateOBWasher;
-        private System.Windows.Forms.TextBox textPatronymicWasher;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textSurnameWasher;
-        private System.Windows.Forms.TextBox textNameWasher;
         private System.Windows.Forms.Button buttonAddWasher;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabCliets;
-        private System.Windows.Forms.TextBox textPatronymicClient;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textSurnameClient;
-        private System.Windows.Forms.TextBox textNameClient;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonAddClient;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textModelCarClient;
         private System.Windows.Forms.TabPage tabServices;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textPriceService;
         private System.Windows.Forms.Button buttonAddService;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textNameService;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem BackToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.NumericUpDown textPriceService;
+        private System.Windows.Forms.MaskedTextBox textPatronymicClient;
+        private System.Windows.Forms.MaskedTextBox textSurnameClient;
+        private System.Windows.Forms.MaskedTextBox textNameClient;
+        private System.Windows.Forms.MaskedTextBox textModelCarClient;
+        private System.Windows.Forms.MaskedTextBox textNameService;
+        private System.Windows.Forms.MaskedTextBox textPatronymicWasher;
+        private System.Windows.Forms.MaskedTextBox textSurnameWasher;
+        private System.Windows.Forms.MaskedTextBox textNameWasher;
     }
 }

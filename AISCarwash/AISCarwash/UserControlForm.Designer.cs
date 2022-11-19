@@ -37,22 +37,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textChangePassword = new System.Windows.Forms.TextBox();
-            this.textChangeLogin = new System.Windows.Forms.TextBox();
             this.ChangeMode = new System.Windows.Forms.ComboBox();
             this.buttonChange = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textChangeFullname = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textCreatePassword = new System.Windows.Forms.TextBox();
-            this.textCreateLogin = new System.Windows.Forms.TextBox();
             this.CreateMode = new System.Windows.Forms.ComboBox();
             this.buttonCreate = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textCreateFullname = new System.Windows.Forms.TextBox();
+            this.textChangeLogin = new System.Windows.Forms.MaskedTextBox();
+            this.textChangePassword = new System.Windows.Forms.MaskedTextBox();
+            this.textChangeFullname = new System.Windows.Forms.MaskedTextBox();
+            this.textCreateFullname = new System.Windows.Forms.MaskedTextBox();
+            this.textCreatePassword = new System.Windows.Forms.MaskedTextBox();
+            this.textCreateLogin = new System.Windows.Forms.MaskedTextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabControl.SuspendLayout();
@@ -67,7 +67,7 @@
             this.BackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -104,16 +104,16 @@
             // 
             // TabChange
             // 
+            this.TabChange.Controls.Add(this.textChangeFullname);
+            this.TabChange.Controls.Add(this.textChangePassword);
+            this.TabChange.Controls.Add(this.textChangeLogin);
             this.TabChange.Controls.Add(this.buttonDelete);
             this.TabChange.Controls.Add(this.label4);
             this.TabChange.Controls.Add(this.label3);
             this.TabChange.Controls.Add(this.label2);
-            this.TabChange.Controls.Add(this.textChangePassword);
-            this.TabChange.Controls.Add(this.textChangeLogin);
             this.TabChange.Controls.Add(this.ChangeMode);
             this.TabChange.Controls.Add(this.buttonChange);
             this.TabChange.Controls.Add(this.label1);
-            this.TabChange.Controls.Add(this.textChangeFullname);
             this.TabChange.Location = new System.Drawing.Point(4, 33);
             this.TabChange.Name = "TabChange";
             this.TabChange.Padding = new System.Windows.Forms.Padding(3);
@@ -159,20 +159,6 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "ФИО:";
             // 
-            // textChangePassword
-            // 
-            this.textChangePassword.Location = new System.Drawing.Point(12, 90);
-            this.textChangePassword.Name = "textChangePassword";
-            this.textChangePassword.Size = new System.Drawing.Size(227, 31);
-            this.textChangePassword.TabIndex = 25;
-            // 
-            // textChangeLogin
-            // 
-            this.textChangeLogin.Location = new System.Drawing.Point(12, 30);
-            this.textChangeLogin.Name = "textChangeLogin";
-            this.textChangeLogin.Size = new System.Drawing.Size(227, 31);
-            this.textChangeLogin.TabIndex = 24;
-            // 
             // ChangeMode
             // 
             this.ChangeMode.FormattingEnabled = true;
@@ -200,24 +186,17 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Логин:";
             // 
-            // textChangeFullname
-            // 
-            this.textChangeFullname.Location = new System.Drawing.Point(266, 30);
-            this.textChangeFullname.Name = "textChangeFullname";
-            this.textChangeFullname.Size = new System.Drawing.Size(350, 31);
-            this.textChangeFullname.TabIndex = 18;
-            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textCreateFullname);
+            this.tabPage2.Controls.Add(this.textCreatePassword);
+            this.tabPage2.Controls.Add(this.textCreateLogin);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.textCreatePassword);
-            this.tabPage2.Controls.Add(this.textCreateLogin);
             this.tabPage2.Controls.Add(this.CreateMode);
             this.tabPage2.Controls.Add(this.buttonCreate);
             this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.textCreateFullname);
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -253,20 +232,6 @@
             this.label7.TabIndex = 35;
             this.label7.Text = "ФИО:";
             // 
-            // textCreatePassword
-            // 
-            this.textCreatePassword.Location = new System.Drawing.Point(12, 90);
-            this.textCreatePassword.Name = "textCreatePassword";
-            this.textCreatePassword.Size = new System.Drawing.Size(227, 31);
-            this.textCreatePassword.TabIndex = 34;
-            // 
-            // textCreateLogin
-            // 
-            this.textCreateLogin.Location = new System.Drawing.Point(12, 30);
-            this.textCreateLogin.Name = "textCreateLogin";
-            this.textCreateLogin.Size = new System.Drawing.Size(227, 31);
-            this.textCreateLogin.TabIndex = 33;
-            // 
             // CreateMode
             // 
             this.CreateMode.FormattingEnabled = true;
@@ -294,12 +259,53 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "Логин:";
             // 
+            // textChangeLogin
+            // 
+            this.textChangeLogin.Location = new System.Drawing.Point(12, 30);
+            this.textChangeLogin.Mask = "L????????????????????????????????????????????";
+            this.textChangeLogin.Name = "textChangeLogin";
+            this.textChangeLogin.Size = new System.Drawing.Size(227, 31);
+            this.textChangeLogin.TabIndex = 34;
+            // 
+            // textChangePassword
+            // 
+            this.textChangePassword.Location = new System.Drawing.Point(12, 91);
+            this.textChangePassword.Mask = "LLLLLLLL?????????????????????????????????????";
+            this.textChangePassword.Name = "textChangePassword";
+            this.textChangePassword.Size = new System.Drawing.Size(227, 31);
+            this.textChangePassword.TabIndex = 35;
+            // 
+            // textChangeFullname
+            // 
+            this.textChangeFullname.Location = new System.Drawing.Point(266, 30);
+            this.textChangeFullname.Mask = "LLL??????????????????????????????????????????";
+            this.textChangeFullname.Name = "textChangeFullname";
+            this.textChangeFullname.Size = new System.Drawing.Size(350, 31);
+            this.textChangeFullname.TabIndex = 36;
+            // 
             // textCreateFullname
             // 
-            this.textCreateFullname.Location = new System.Drawing.Point(266, 49);
+            this.textCreateFullname.Location = new System.Drawing.Point(266, 57);
+            this.textCreateFullname.Mask = "LLL??????????????????????????????????????????";
             this.textCreateFullname.Name = "textCreateFullname";
             this.textCreateFullname.Size = new System.Drawing.Size(350, 31);
-            this.textCreateFullname.TabIndex = 29;
+            this.textCreateFullname.TabIndex = 40;
+            // 
+            // textCreatePassword
+            // 
+            this.textCreatePassword.Location = new System.Drawing.Point(12, 91);
+            this.textCreatePassword.Mask = "LLLLLLLL?????????????????????????????????????";
+            this.textCreatePassword.Name = "textCreatePassword";
+            this.textCreatePassword.Size = new System.Drawing.Size(227, 31);
+            this.textCreatePassword.TabIndex = 39;
+            // 
+            // textCreateLogin
+            // 
+            this.textCreateLogin.Location = new System.Drawing.Point(12, 30);
+            this.textCreateLogin.Mask = "L????????????????????????????????????????????";
+            this.textCreateLogin.Name = "textCreateLogin";
+            this.textCreateLogin.Size = new System.Drawing.Size(227, 31);
+            this.textCreateLogin.TabIndex = 38;
             // 
             // UserControlForm
             // 
@@ -340,22 +346,22 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textChangePassword;
-        private System.Windows.Forms.TextBox textChangeLogin;
         private System.Windows.Forms.ComboBox ChangeMode;
         private System.Windows.Forms.Button buttonChange;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textChangeFullname;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textCreatePassword;
-        private System.Windows.Forms.TextBox textCreateLogin;
         private System.Windows.Forms.ComboBox CreateMode;
         private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textCreateFullname;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.MaskedTextBox textChangeFullname;
+        private System.Windows.Forms.MaskedTextBox textChangePassword;
+        private System.Windows.Forms.MaskedTextBox textChangeLogin;
+        private System.Windows.Forms.MaskedTextBox textCreateFullname;
+        private System.Windows.Forms.MaskedTextBox textCreatePassword;
+        private System.Windows.Forms.MaskedTextBox textCreateLogin;
     }
 }
