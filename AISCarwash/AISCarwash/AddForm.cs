@@ -70,6 +70,8 @@ namespace AISCarwash
 
         private void buttonAddWasher_Click(object sender, EventArgs e)
         {
+            if (MySqlConnecter.StringsIsEmpty(textNameWasher.Text, textSurnameWasher.Text))
+                return;
             string table = GetCurrentTable();
             string values = $"DEFAULT, '{textNameWasher.Text}', '{textSurnameWasher.Text}', '{textPatronymicWasher.Text}', '{dateOBWasher.Value.ToString("yyyy-MM-dd")}'"; 
             MySqlConnecter.QueryAddInTable(table, values);
@@ -79,6 +81,8 @@ namespace AISCarwash
 
         private void buttonAddClient_Click(object sender, EventArgs e)
         {
+            if (MySqlConnecter.StringsIsEmpty(textNameClient.Text, textSurnameClient.Text, textModelCarClient.Text))
+                return;
             string table = GetCurrentTable();
             string values = $"DEFAULT, '{textNameClient.Text}', '{textSurnameClient.Text}', '{textPatronymicClient.Text}', '{textModelCarClient.Text}'";
             MySqlConnecter.QueryAddInTable(table, values);
@@ -88,6 +92,8 @@ namespace AISCarwash
 
         private void buttonAddService_Click(object sender, EventArgs e)
         {
+            if (MySqlConnecter.StringsIsEmpty(textNameService.Text))
+                return;
             string table = GetCurrentTable();
             string values = $"DEFAULT, '{textNameService.Text}', {textPriceService.Text}";
             MySqlConnecter.QueryAddInTable(table, values);

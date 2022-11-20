@@ -1,9 +1,11 @@
 ﻿using Microsoft.SqlServer.Server;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Relational;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,67 +21,75 @@ namespace AISCarwash
         
         public static DataTable QueryReturnTable(string column, string tableName, string condition)
         {
-            string query = $"SELECT {column} FROM {tableName} WHERE {condition};";
             DataTable table = new DataTable();
-            _dbConection.Open();
+            string query = $"SELECT {column} FROM {tableName} WHERE {condition};";
             try 
             {
+                _dbConection.Open();
                 MySqlCommand command = new MySqlCommand(query, _dbConection);
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
                 dataAdapter.Fill(table);
+                _dbConection.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "\n" + query, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            _dbConection.Close();
             return table;
         }
-        public static void QueryAddInTable(string table, string values)
+        public static void QueryAddInTable(string tableName, string values)
         {
-            string query = $"INSERT INTO {table} VALUES ({values});";
-            _dbConection.Open();
+            string query = $"INSERT INTO {tableName} VALUES ({values});";
             try
             {
+                _dbConection.Open();
                 MySqlCommand command = new MySqlCommand(query, _dbConection);
                 command.ExecuteNonQuery();
+                _dbConection.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "\n" + query, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            _dbConection.Close();
         }
-        public static void QueryChangeInTable(string table, string values, string condition)
+        public static void QueryChangeInTable(string tableName, string values, string condition)
         {
-            string query = $"UPDATE {table} SET {values} WHERE {condition};";
-            _dbConection.Open();
+            string query = $"UPDATE {tableName} SET {values} WHERE {condition};";
             try
             {
+                _dbConection.Open();
                 MySqlCommand command = new MySqlCommand(query, _dbConection);
                 command.ExecuteNonQuery();
+                _dbConection.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "\n" + query, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            _dbConection.Close();
         }
         public static void QueryDeleteInTable(string table, string condition)
         { 
             string query = $"DELETE FROM {table} WHERE {condition};";
-            _dbConection.Open();
             try
             {
+                _dbConection.Open();
                 MySqlCommand command = new MySqlCommand(query, _dbConection);
                 command.ExecuteNonQuery();
+                _dbConection.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "\n" + query, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            _dbConection.Close();
         }
-
+        public static bool StringsIsEmpty(params string[] parameters)
+        {
+            for (int i = 0; i < parameters.Length; i++)
+            {
+                if (parameters[i] == string.Empty)
+                    return true;
+            }
+            return false;
+        }
     }
 }

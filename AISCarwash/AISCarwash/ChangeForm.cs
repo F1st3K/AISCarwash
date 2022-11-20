@@ -105,6 +105,8 @@ namespace AISCarwash
 
         private void buttonChangeWasher_Click(object sender, EventArgs e)
         {
+            if (MySqlConnecter.StringsIsEmpty(textNameWasher.Text, textSurnameWasher.Text))
+                return;
             string table = GetCurrentTable();
             string values = $" {_currentRow.Cells[1].OwningColumn.Name} = '{textNameWasher.Text}', " +
                 $" {_currentRow.Cells[2].OwningColumn.Name} = '{textSurnameWasher.Text}', " +
@@ -118,6 +120,8 @@ namespace AISCarwash
 
         private void buttonChangeClient_Click(object sender, EventArgs e)
         {
+            if (MySqlConnecter.StringsIsEmpty(textNameClient.Text, textSurnameClient.Text, textModelCarClient.Text))
+                return;
             string table = GetCurrentTable();
             string values = $" {_currentRow.Cells[1].OwningColumn.Name} = '{textNameClient.Text}', " +
                 $" {_currentRow.Cells[2].OwningColumn.Name} = '{textSurnameClient.Text}', " +
@@ -131,6 +135,8 @@ namespace AISCarwash
 
         private void buttonChangeService_Click(object sender, EventArgs e)
         {
+            if (MySqlConnecter.StringsIsEmpty(textNameService.Text))
+                return;
             string table = GetCurrentTable();
             string values = $" {_currentRow.Cells[1].OwningColumn.Name} = '{textNameService.Text}', " +
                 $" {_currentRow.Cells[2].OwningColumn.Name} = {textPriceService.Text}";

@@ -30,6 +30,9 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabWashers = new System.Windows.Forms.TabPage();
+            this.textPatronymicWasher = new System.Windows.Forms.MaskedTextBox();
+            this.textSurnameWasher = new System.Windows.Forms.MaskedTextBox();
+            this.textNameWasher = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dateOBWasher = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,9 +58,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.textNameWasher = new System.Windows.Forms.MaskedTextBox();
-            this.textSurnameWasher = new System.Windows.Forms.MaskedTextBox();
-            this.textPatronymicWasher = new System.Windows.Forms.MaskedTextBox();
             this.tabControl.SuspendLayout();
             this.tabWashers.SuspendLayout();
             this.tabCliets.SuspendLayout();
@@ -97,6 +97,30 @@
             this.tabWashers.TabIndex = 0;
             this.tabWashers.Text = "Сотрудники (мойщики)";
             this.tabWashers.UseVisualStyleBackColor = true;
+            // 
+            // textPatronymicWasher
+            // 
+            this.textPatronymicWasher.Location = new System.Drawing.Point(105, 152);
+            this.textPatronymicWasher.Mask = "???????????????";
+            this.textPatronymicWasher.Name = "textPatronymicWasher";
+            this.textPatronymicWasher.Size = new System.Drawing.Size(227, 31);
+            this.textPatronymicWasher.TabIndex = 35;
+            // 
+            // textSurnameWasher
+            // 
+            this.textSurnameWasher.Location = new System.Drawing.Point(105, 92);
+            this.textSurnameWasher.Mask = "???????????????";
+            this.textSurnameWasher.Name = "textSurnameWasher";
+            this.textSurnameWasher.Size = new System.Drawing.Size(227, 31);
+            this.textSurnameWasher.TabIndex = 34;
+            // 
+            // textNameWasher
+            // 
+            this.textNameWasher.Location = new System.Drawing.Point(105, 30);
+            this.textNameWasher.Mask = "???????????????";
+            this.textNameWasher.Name = "textNameWasher";
+            this.textNameWasher.Size = new System.Drawing.Size(227, 31);
+            this.textNameWasher.TabIndex = 33;
             // 
             // label8
             // 
@@ -176,7 +200,7 @@
             // textPatronymicClient
             // 
             this.textPatronymicClient.Location = new System.Drawing.Point(105, 152);
-            this.textPatronymicClient.Mask = "?????????????????????????";
+            this.textPatronymicClient.Mask = "???????????????";
             this.textPatronymicClient.Name = "textPatronymicClient";
             this.textPatronymicClient.Size = new System.Drawing.Size(227, 31);
             this.textPatronymicClient.TabIndex = 40;
@@ -184,7 +208,7 @@
             // textSurnameClient
             // 
             this.textSurnameClient.Location = new System.Drawing.Point(105, 90);
-            this.textSurnameClient.Mask = "L??????????????";
+            this.textSurnameClient.Mask = "???????????????";
             this.textSurnameClient.Name = "textSurnameClient";
             this.textSurnameClient.Size = new System.Drawing.Size(227, 31);
             this.textSurnameClient.TabIndex = 39;
@@ -192,7 +216,7 @@
             // textNameClient
             // 
             this.textNameClient.Location = new System.Drawing.Point(105, 30);
-            this.textNameClient.Mask = "L??????????????";
+            this.textNameClient.Mask = "???????????????";
             this.textNameClient.Name = "textNameClient";
             this.textNameClient.Size = new System.Drawing.Size(227, 31);
             this.textNameClient.TabIndex = 38;
@@ -200,7 +224,7 @@
             // textModelCarClient
             // 
             this.textModelCarClient.Location = new System.Drawing.Point(363, 30);
-            this.textModelCarClient.Mask = "L????????????????????????";
+            this.textModelCarClient.Mask = "?????????????????????????";
             this.textModelCarClient.Name = "textModelCarClient";
             this.textModelCarClient.Size = new System.Drawing.Size(350, 31);
             this.textModelCarClient.TabIndex = 37;
@@ -269,7 +293,7 @@
             // textNameService
             // 
             this.textNameService.Location = new System.Drawing.Point(325, 32);
-            this.textNameService.Mask = "L????????????????????????????????????????????";
+            this.textNameService.Mask = "????????????????????????????????????????";
             this.textNameService.Name = "textNameService";
             this.textNameService.Size = new System.Drawing.Size(374, 31);
             this.textNameService.TabIndex = 44;
@@ -321,7 +345,7 @@
             this.BackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -344,30 +368,6 @@
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(1006, 468);
             this.dataGridView.TabIndex = 8;
-            // 
-            // textNameWasher
-            // 
-            this.textNameWasher.Location = new System.Drawing.Point(105, 30);
-            this.textNameWasher.Mask = "L??????????????";
-            this.textNameWasher.Name = "textNameWasher";
-            this.textNameWasher.Size = new System.Drawing.Size(227, 31);
-            this.textNameWasher.TabIndex = 33;
-            // 
-            // textSurnameWasher
-            // 
-            this.textSurnameWasher.Location = new System.Drawing.Point(105, 92);
-            this.textSurnameWasher.Mask = "L???????????????";
-            this.textSurnameWasher.Name = "textSurnameWasher";
-            this.textSurnameWasher.Size = new System.Drawing.Size(227, 31);
-            this.textSurnameWasher.TabIndex = 34;
-            // 
-            // textPatronymicWasher
-            // 
-            this.textPatronymicWasher.Location = new System.Drawing.Point(105, 152);
-            this.textPatronymicWasher.Mask = "?????????????????????????";
-            this.textPatronymicWasher.Name = "textPatronymicWasher";
-            this.textPatronymicWasher.Size = new System.Drawing.Size(227, 31);
-            this.textPatronymicWasher.TabIndex = 35;
             // 
             // AddForm
             // 

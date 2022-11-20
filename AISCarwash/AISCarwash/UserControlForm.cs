@@ -75,6 +75,8 @@ namespace AISCarwash
 
         private void buttonChange_Click(object sender, EventArgs e)
         {
+            if (MySqlConnecter.StringsIsEmpty(textChangeLogin.Text, textChangePassword.Text))
+                return;
             string table = "users";
             string values = $" {_currentRow.Cells[1].OwningColumn.Name} = '{textChangeFullname.Text}', " +
                 $"{_currentRow.Cells[2].OwningColumn.Name} = '{textChangeLogin.Text}', " +
@@ -88,6 +90,8 @@ namespace AISCarwash
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
+            if(MySqlConnecter.StringsIsEmpty(textCreateLogin.Text, textCreatePassword.Text))
+                return;
             string table = "users";
             string values = $"DEFAULT, '{textCreateFullname.Text}', '{textCreateLogin.Text}', '{textCreatePassword.Text}', '{CreateMode.Text}'";
             MySqlConnecter.QueryAddInTable(table, values);

@@ -30,44 +30,44 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabWashers = new System.Windows.Forms.TabPage();
-            this.buttonDelWasher = new System.Windows.Forms.Button();
-            this.buttonChangeWasher = new System.Windows.Forms.Button();
-            this.tabCliets = new System.Windows.Forms.TabPage();
-            this.buttonDelClient = new System.Windows.Forms.Button();
-            this.buttonChangeClient = new System.Windows.Forms.Button();
-            this.tabServices = new System.Windows.Forms.TabPage();
-            this.buttonDelService = new System.Windows.Forms.Button();
-            this.buttonChangeService = new System.Windows.Forms.Button();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textNameService = new System.Windows.Forms.MaskedTextBox();
-            this.textPriceService = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textPatronymicClient = new System.Windows.Forms.MaskedTextBox();
-            this.textSurnameClient = new System.Windows.Forms.MaskedTextBox();
-            this.textNameClient = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textModelCarClient = new System.Windows.Forms.MaskedTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dateOBWasher = new System.Windows.Forms.DateTimePicker();
             this.textPatronymicWasher = new System.Windows.Forms.MaskedTextBox();
             this.textSurnameWasher = new System.Windows.Forms.MaskedTextBox();
             this.textNameWasher = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dateOBWasher = new System.Windows.Forms.DateTimePicker();
+            this.buttonDelWasher = new System.Windows.Forms.Button();
+            this.buttonChangeWasher = new System.Windows.Forms.Button();
+            this.tabCliets = new System.Windows.Forms.TabPage();
+            this.textModelCarClient = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textPatronymicClient = new System.Windows.Forms.MaskedTextBox();
+            this.textSurnameClient = new System.Windows.Forms.MaskedTextBox();
+            this.textNameClient = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonDelClient = new System.Windows.Forms.Button();
+            this.buttonChangeClient = new System.Windows.Forms.Button();
+            this.tabServices = new System.Windows.Forms.TabPage();
+            this.textNameService = new System.Windows.Forms.MaskedTextBox();
+            this.textPriceService = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.buttonDelService = new System.Windows.Forms.Button();
+            this.buttonChangeService = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl.SuspendLayout();
             this.tabWashers.SuspendLayout();
             this.tabCliets.SuspendLayout();
             this.tabServices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textPriceService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textPriceService)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -101,6 +101,76 @@
             this.tabWashers.TabIndex = 0;
             this.tabWashers.Text = "Сотрудники (мойщики)";
             this.tabWashers.UseVisualStyleBackColor = true;
+            // 
+            // textPatronymicWasher
+            // 
+            this.textPatronymicWasher.Location = new System.Drawing.Point(8, 151);
+            this.textPatronymicWasher.Mask = "???????????????";
+            this.textPatronymicWasher.Name = "textPatronymicWasher";
+            this.textPatronymicWasher.Size = new System.Drawing.Size(227, 31);
+            this.textPatronymicWasher.TabIndex = 41;
+            // 
+            // textSurnameWasher
+            // 
+            this.textSurnameWasher.Location = new System.Drawing.Point(8, 91);
+            this.textSurnameWasher.Mask = "???????????????";
+            this.textSurnameWasher.Name = "textSurnameWasher";
+            this.textSurnameWasher.Size = new System.Drawing.Size(227, 31);
+            this.textSurnameWasher.TabIndex = 40;
+            // 
+            // textNameWasher
+            // 
+            this.textNameWasher.Location = new System.Drawing.Point(8, 29);
+            this.textNameWasher.Mask = "???????????????";
+            this.textNameWasher.Name = "textNameWasher";
+            this.textNameWasher.Size = new System.Drawing.Size(227, 31);
+            this.textNameWasher.TabIndex = 39;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 123);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 24);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Отчество:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 24);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Фамилия:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 24);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Имя:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(263, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(140, 24);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Дата рождения:";
+            // 
+            // dateOBWasher
+            // 
+            this.dateOBWasher.Location = new System.Drawing.Point(267, 30);
+            this.dateOBWasher.MaxDate = new System.DateTime(2022, 11, 19, 0, 0, 0, 0);
+            this.dateOBWasher.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dateOBWasher.Name = "dateOBWasher";
+            this.dateOBWasher.Size = new System.Drawing.Size(350, 31);
+            this.dateOBWasher.TabIndex = 33;
+            this.dateOBWasher.Value = new System.DateTime(2022, 11, 19, 0, 0, 0, 0);
             // 
             // buttonDelWasher
             // 
@@ -142,6 +212,74 @@
             this.tabCliets.Text = "Клиенты";
             this.tabCliets.UseVisualStyleBackColor = true;
             // 
+            // textModelCarClient
+            // 
+            this.textModelCarClient.Location = new System.Drawing.Point(266, 31);
+            this.textModelCarClient.Mask = "?????????????????????????";
+            this.textModelCarClient.Name = "textModelCarClient";
+            this.textModelCarClient.Size = new System.Drawing.Size(350, 31);
+            this.textModelCarClient.TabIndex = 48;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(262, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 24);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Модель авто:";
+            // 
+            // textPatronymicClient
+            // 
+            this.textPatronymicClient.Location = new System.Drawing.Point(8, 151);
+            this.textPatronymicClient.Mask = "???????????????";
+            this.textPatronymicClient.Name = "textPatronymicClient";
+            this.textPatronymicClient.Size = new System.Drawing.Size(227, 31);
+            this.textPatronymicClient.TabIndex = 46;
+            // 
+            // textSurnameClient
+            // 
+            this.textSurnameClient.Location = new System.Drawing.Point(8, 89);
+            this.textSurnameClient.Mask = "???????????????";
+            this.textSurnameClient.Name = "textSurnameClient";
+            this.textSurnameClient.Size = new System.Drawing.Size(227, 31);
+            this.textSurnameClient.TabIndex = 45;
+            // 
+            // textNameClient
+            // 
+            this.textNameClient.Location = new System.Drawing.Point(8, 29);
+            this.textNameClient.Mask = "???????????????";
+            this.textNameClient.Name = "textNameClient";
+            this.textNameClient.Size = new System.Drawing.Size(227, 31);
+            this.textNameClient.TabIndex = 44;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 24);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Отчество:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(4, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 24);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Фамилия:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 2);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 24);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Имя:";
+            // 
             // buttonDelClient
             // 
             this.buttonDelClient.Location = new System.Drawing.Point(266, 137);
@@ -177,6 +315,44 @@
             this.tabServices.TabIndex = 2;
             this.tabServices.Text = "Услуги";
             this.tabServices.UseVisualStyleBackColor = true;
+            // 
+            // textNameService
+            // 
+            this.textNameService.Location = new System.Drawing.Point(8, 66);
+            this.textNameService.Mask = "?????????????????????????????????????????????";
+            this.textNameService.Name = "textNameService";
+            this.textNameService.Size = new System.Drawing.Size(374, 31);
+            this.textNameService.TabIndex = 48;
+            // 
+            // textPriceService
+            // 
+            this.textPriceService.Location = new System.Drawing.Point(8, 129);
+            this.textPriceService.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.textPriceService.Name = "textPriceService";
+            this.textPriceService.Size = new System.Drawing.Size(120, 31);
+            this.textPriceService.TabIndex = 47;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 100);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 24);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "Цена:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(4, 37);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(201, 24);
+            this.label12.TabIndex = 45;
+            this.label12.Text = "Наименование услуги:";
             // 
             // buttonDelService
             // 
@@ -220,7 +396,7 @@
             this.BackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -230,182 +406,6 @@
             this.BackToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.BackToolStripMenuItem.Text = "Назад";
             this.BackToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
-            // 
-            // textNameService
-            // 
-            this.textNameService.Location = new System.Drawing.Point(8, 66);
-            this.textNameService.Mask = "L????????????????????????????????????????????";
-            this.textNameService.Name = "textNameService";
-            this.textNameService.Size = new System.Drawing.Size(374, 31);
-            this.textNameService.TabIndex = 48;
-            // 
-            // textPriceService
-            // 
-            this.textPriceService.Location = new System.Drawing.Point(8, 129);
-            this.textPriceService.Maximum = new decimal(new int[] {
-            -1530494977,
-            232830,
-            0,
-            0});
-            this.textPriceService.Name = "textPriceService";
-            this.textPriceService.Size = new System.Drawing.Size(120, 31);
-            this.textPriceService.TabIndex = 47;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 100);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 24);
-            this.label9.TabIndex = 46;
-            this.label9.Text = "Цена:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 37);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(201, 24);
-            this.label12.TabIndex = 45;
-            this.label12.Text = "Наименование услуги:";
-            // 
-            // textPatronymicClient
-            // 
-            this.textPatronymicClient.Location = new System.Drawing.Point(8, 151);
-            this.textPatronymicClient.Mask = "?????????????????????????";
-            this.textPatronymicClient.Name = "textPatronymicClient";
-            this.textPatronymicClient.Size = new System.Drawing.Size(227, 31);
-            this.textPatronymicClient.TabIndex = 46;
-            // 
-            // textSurnameClient
-            // 
-            this.textSurnameClient.Location = new System.Drawing.Point(8, 89);
-            this.textSurnameClient.Mask = "L??????????????";
-            this.textSurnameClient.Name = "textSurnameClient";
-            this.textSurnameClient.Size = new System.Drawing.Size(227, 31);
-            this.textSurnameClient.TabIndex = 45;
-            // 
-            // textNameClient
-            // 
-            this.textNameClient.Location = new System.Drawing.Point(8, 29);
-            this.textNameClient.Mask = "L??????????????";
-            this.textNameClient.Name = "textNameClient";
-            this.textNameClient.Size = new System.Drawing.Size(227, 31);
-            this.textNameClient.TabIndex = 44;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 24);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Отчество:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 24);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Фамилия:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 24);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Имя:";
-            // 
-            // textModelCarClient
-            // 
-            this.textModelCarClient.Location = new System.Drawing.Point(266, 31);
-            this.textModelCarClient.Mask = "L????????????????????????";
-            this.textModelCarClient.Name = "textModelCarClient";
-            this.textModelCarClient.Size = new System.Drawing.Size(350, 31);
-            this.textModelCarClient.TabIndex = 48;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(262, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 24);
-            this.label7.TabIndex = 47;
-            this.label7.Text = "Модель авто:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(263, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(140, 24);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Дата рождения:";
-            // 
-            // dateOBWasher
-            // 
-            this.dateOBWasher.Location = new System.Drawing.Point(267, 30);
-            this.dateOBWasher.MaxDate = new System.DateTime(2022, 11, 19, 0, 0, 0, 0);
-            this.dateOBWasher.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dateOBWasher.Name = "dateOBWasher";
-            this.dateOBWasher.Size = new System.Drawing.Size(350, 31);
-            this.dateOBWasher.TabIndex = 33;
-            this.dateOBWasher.Value = new System.DateTime(2022, 11, 19, 0, 0, 0, 0);
-            // 
-            // textPatronymicWasher
-            // 
-            this.textPatronymicWasher.Location = new System.Drawing.Point(8, 151);
-            this.textPatronymicWasher.Mask = "?????????????????????????";
-            this.textPatronymicWasher.Name = "textPatronymicWasher";
-            this.textPatronymicWasher.Size = new System.Drawing.Size(227, 31);
-            this.textPatronymicWasher.TabIndex = 41;
-            // 
-            // textSurnameWasher
-            // 
-            this.textSurnameWasher.Location = new System.Drawing.Point(8, 91);
-            this.textSurnameWasher.Mask = "L??????????????";
-            this.textSurnameWasher.Name = "textSurnameWasher";
-            this.textSurnameWasher.Size = new System.Drawing.Size(227, 31);
-            this.textSurnameWasher.TabIndex = 40;
-            // 
-            // textNameWasher
-            // 
-            this.textNameWasher.Location = new System.Drawing.Point(8, 29);
-            this.textNameWasher.Mask = "L??????????????";
-            this.textNameWasher.Name = "textNameWasher";
-            this.textNameWasher.Size = new System.Drawing.Size(227, 31);
-            this.textNameWasher.TabIndex = 39;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 123);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 24);
-            this.label4.TabIndex = 38;
-            this.label4.Text = "Отчество:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 24);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Фамилия:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 24);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Имя:";
             // 
             // ChangeForm
             // 
@@ -429,10 +429,10 @@
             this.tabCliets.PerformLayout();
             this.tabServices.ResumeLayout(false);
             this.tabServices.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textPriceService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textPriceService)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -33,6 +33,9 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.TabChange = new System.Windows.Forms.TabPage();
+            this.textChangeFullname = new System.Windows.Forms.MaskedTextBox();
+            this.textChangePassword = new System.Windows.Forms.MaskedTextBox();
+            this.textChangeLogin = new System.Windows.Forms.MaskedTextBox();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,18 +44,15 @@
             this.buttonChange = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textCreateFullname = new System.Windows.Forms.MaskedTextBox();
+            this.textCreatePassword = new System.Windows.Forms.MaskedTextBox();
+            this.textCreateLogin = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.CreateMode = new System.Windows.Forms.ComboBox();
             this.buttonCreate = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textChangeLogin = new System.Windows.Forms.MaskedTextBox();
-            this.textChangePassword = new System.Windows.Forms.MaskedTextBox();
-            this.textChangeFullname = new System.Windows.Forms.MaskedTextBox();
-            this.textCreateFullname = new System.Windows.Forms.MaskedTextBox();
-            this.textCreatePassword = new System.Windows.Forms.MaskedTextBox();
-            this.textCreateLogin = new System.Windows.Forms.MaskedTextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabControl.SuspendLayout();
@@ -67,14 +67,14 @@
             this.BackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // BackToolStripMenuItem
             // 
             this.BackToolStripMenuItem.Name = "BackToolStripMenuItem";
-            this.BackToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.BackToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
             this.BackToolStripMenuItem.Text = "Назад";
             this.BackToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
@@ -121,6 +121,30 @@
             this.TabChange.TabIndex = 0;
             this.TabChange.Text = "Редактирование/Удаление";
             this.TabChange.UseVisualStyleBackColor = true;
+            // 
+            // textChangeFullname
+            // 
+            this.textChangeFullname.Location = new System.Drawing.Point(266, 30);
+            this.textChangeFullname.Mask = "?????????????????????????????????????????????";
+            this.textChangeFullname.Name = "textChangeFullname";
+            this.textChangeFullname.Size = new System.Drawing.Size(350, 31);
+            this.textChangeFullname.TabIndex = 36;
+            // 
+            // textChangePassword
+            // 
+            this.textChangePassword.Location = new System.Drawing.Point(12, 91);
+            this.textChangePassword.Mask = "?????????????????????????????????????????????";
+            this.textChangePassword.Name = "textChangePassword";
+            this.textChangePassword.Size = new System.Drawing.Size(227, 31);
+            this.textChangePassword.TabIndex = 35;
+            // 
+            // textChangeLogin
+            // 
+            this.textChangeLogin.Location = new System.Drawing.Point(12, 30);
+            this.textChangeLogin.Mask = "?????????????????????????????????????????????";
+            this.textChangeLogin.Name = "textChangeLogin";
+            this.textChangeLogin.Size = new System.Drawing.Size(227, 31);
+            this.textChangeLogin.TabIndex = 34;
             // 
             // buttonDelete
             // 
@@ -205,6 +229,30 @@
             this.tabPage2.Text = "Регистрация нового пользователя";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // textCreateFullname
+            // 
+            this.textCreateFullname.Location = new System.Drawing.Point(266, 57);
+            this.textCreateFullname.Mask = "?????????????????????????????????????????????";
+            this.textCreateFullname.Name = "textCreateFullname";
+            this.textCreateFullname.Size = new System.Drawing.Size(350, 31);
+            this.textCreateFullname.TabIndex = 40;
+            // 
+            // textCreatePassword
+            // 
+            this.textCreatePassword.Location = new System.Drawing.Point(12, 91);
+            this.textCreatePassword.Mask = "?????????????????????????????????????????????";
+            this.textCreatePassword.Name = "textCreatePassword";
+            this.textCreatePassword.Size = new System.Drawing.Size(227, 31);
+            this.textCreatePassword.TabIndex = 39;
+            // 
+            // textCreateLogin
+            // 
+            this.textCreateLogin.Location = new System.Drawing.Point(12, 30);
+            this.textCreateLogin.Mask = "?????????????????????????????????????????????";
+            this.textCreateLogin.Name = "textCreateLogin";
+            this.textCreateLogin.Size = new System.Drawing.Size(227, 31);
+            this.textCreateLogin.TabIndex = 38;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -258,54 +306,6 @@
             this.label8.Size = new System.Drawing.Size(67, 24);
             this.label8.TabIndex = 30;
             this.label8.Text = "Логин:";
-            // 
-            // textChangeLogin
-            // 
-            this.textChangeLogin.Location = new System.Drawing.Point(12, 30);
-            this.textChangeLogin.Mask = "L????????????????????????????????????????????";
-            this.textChangeLogin.Name = "textChangeLogin";
-            this.textChangeLogin.Size = new System.Drawing.Size(227, 31);
-            this.textChangeLogin.TabIndex = 34;
-            // 
-            // textChangePassword
-            // 
-            this.textChangePassword.Location = new System.Drawing.Point(12, 91);
-            this.textChangePassword.Mask = "LLLLLLLL?????????????????????????????????????";
-            this.textChangePassword.Name = "textChangePassword";
-            this.textChangePassword.Size = new System.Drawing.Size(227, 31);
-            this.textChangePassword.TabIndex = 35;
-            // 
-            // textChangeFullname
-            // 
-            this.textChangeFullname.Location = new System.Drawing.Point(266, 30);
-            this.textChangeFullname.Mask = "LLL??????????????????????????????????????????";
-            this.textChangeFullname.Name = "textChangeFullname";
-            this.textChangeFullname.Size = new System.Drawing.Size(350, 31);
-            this.textChangeFullname.TabIndex = 36;
-            // 
-            // textCreateFullname
-            // 
-            this.textCreateFullname.Location = new System.Drawing.Point(266, 57);
-            this.textCreateFullname.Mask = "LLL??????????????????????????????????????????";
-            this.textCreateFullname.Name = "textCreateFullname";
-            this.textCreateFullname.Size = new System.Drawing.Size(350, 31);
-            this.textCreateFullname.TabIndex = 40;
-            // 
-            // textCreatePassword
-            // 
-            this.textCreatePassword.Location = new System.Drawing.Point(12, 91);
-            this.textCreatePassword.Mask = "LLLLLLLL?????????????????????????????????????";
-            this.textCreatePassword.Name = "textCreatePassword";
-            this.textCreatePassword.Size = new System.Drawing.Size(227, 31);
-            this.textCreatePassword.TabIndex = 39;
-            // 
-            // textCreateLogin
-            // 
-            this.textCreateLogin.Location = new System.Drawing.Point(12, 30);
-            this.textCreateLogin.Mask = "L????????????????????????????????????????????";
-            this.textCreateLogin.Name = "textCreateLogin";
-            this.textCreateLogin.Size = new System.Drawing.Size(227, 31);
-            this.textCreateLogin.TabIndex = 38;
             // 
             // UserControlForm
             // 
