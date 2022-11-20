@@ -58,6 +58,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.counterTable = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabWashers.SuspendLayout();
             this.tabCliets.SuspendLayout();
@@ -369,11 +371,31 @@
             this.dataGridView.Size = new System.Drawing.Size(1006, 468);
             this.dataGridView.TabIndex = 8;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(741, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(204, 24);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Число строк в таблице:";
+            // 
+            // counterTable
+            // 
+            this.counterTable.AutoSize = true;
+            this.counterTable.Location = new System.Drawing.Point(943, 3);
+            this.counterTable.Name = "counterTable";
+            this.counterTable.Size = new System.Drawing.Size(17, 24);
+            this.counterTable.TabIndex = 9;
+            this.counterTable.Text = "-";
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 721);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.counterTable);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl);
@@ -432,5 +454,7 @@
         private System.Windows.Forms.MaskedTextBox textPatronymicWasher;
         private System.Windows.Forms.MaskedTextBox textSurnameWasher;
         private System.Windows.Forms.MaskedTextBox textNameWasher;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label counterTable;
     }
 }

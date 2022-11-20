@@ -61,6 +61,8 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label10 = new System.Windows.Forms.Label();
+            this.counterTable = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabWashers.SuspendLayout();
             this.tabCliets.SuspendLayout();
@@ -407,11 +409,31 @@
             this.BackToolStripMenuItem.Text = "Назад";
             this.BackToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(742, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(204, 24);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Число строк в таблице:";
+            // 
+            // counterTable
+            // 
+            this.counterTable.AutoSize = true;
+            this.counterTable.Location = new System.Drawing.Point(944, 3);
+            this.counterTable.Name = "counterTable";
+            this.counterTable.Size = new System.Drawing.Size(17, 24);
+            this.counterTable.TabIndex = 6;
+            this.counterTable.Text = "-";
+            // 
             // ChangeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 721);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.counterTable);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.menuStrip1);
@@ -473,5 +495,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label counterTable;
     }
 }

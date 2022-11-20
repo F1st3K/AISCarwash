@@ -46,6 +46,7 @@ namespace AISCarwash
             string column = "*";
             string condition = $"EXISTS (SELECT {column} FROM {tableName})";
             dataGridView.DataSource = MySqlConnecter.QueryReturnTable(column, tableName, condition);
+            counterTable.Text = dataGridView.RowCount.ToString();
         }
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)

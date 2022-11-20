@@ -53,6 +53,8 @@
             this.CreateMode = new System.Windows.Forms.ComboBox();
             this.buttonCreate = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.counterTable = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabControl.SuspendLayout();
@@ -67,14 +69,14 @@
             this.BackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // BackToolStripMenuItem
             // 
             this.BackToolStripMenuItem.Name = "BackToolStripMenuItem";
-            this.BackToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
+            this.BackToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.BackToolStripMenuItem.Text = "Назад";
             this.BackToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
@@ -307,11 +309,31 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "Логин:";
             // 
+            // counterTable
+            // 
+            this.counterTable.AutoSize = true;
+            this.counterTable.Location = new System.Drawing.Point(944, 4);
+            this.counterTable.Name = "counterTable";
+            this.counterTable.Size = new System.Drawing.Size(17, 24);
+            this.counterTable.TabIndex = 3;
+            this.counterTable.Text = "-";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(742, 5);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(204, 24);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Число строк в таблице:";
+            // 
             // UserControlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 721);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.counterTable);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.menuStrip1);
@@ -363,5 +385,7 @@
         private System.Windows.Forms.MaskedTextBox textCreateFullname;
         private System.Windows.Forms.MaskedTextBox textCreatePassword;
         private System.Windows.Forms.MaskedTextBox textCreateLogin;
+        private System.Windows.Forms.Label counterTable;
+        private System.Windows.Forms.Label label10;
     }
 }
