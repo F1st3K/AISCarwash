@@ -176,6 +176,7 @@
             // 
             // buttonDelWasher
             // 
+            this.buttonDelWasher.Enabled = false;
             this.buttonDelWasher.Location = new System.Drawing.Point(267, 137);
             this.buttonDelWasher.Name = "buttonDelWasher";
             this.buttonDelWasher.Size = new System.Drawing.Size(350, 45);
@@ -186,6 +187,7 @@
             // 
             // buttonChangeWasher
             // 
+            this.buttonChangeWasher.Enabled = false;
             this.buttonChangeWasher.Location = new System.Drawing.Point(267, 76);
             this.buttonChangeWasher.Name = "buttonChangeWasher";
             this.buttonChangeWasher.Size = new System.Drawing.Size(350, 45);
@@ -284,6 +286,7 @@
             // 
             // buttonDelClient
             // 
+            this.buttonDelClient.Enabled = false;
             this.buttonDelClient.Location = new System.Drawing.Point(266, 137);
             this.buttonDelClient.Name = "buttonDelClient";
             this.buttonDelClient.Size = new System.Drawing.Size(350, 45);
@@ -294,6 +297,7 @@
             // 
             // buttonChangeClient
             // 
+            this.buttonChangeClient.Enabled = false;
             this.buttonChangeClient.Location = new System.Drawing.Point(266, 76);
             this.buttonChangeClient.Name = "buttonChangeClient";
             this.buttonChangeClient.Size = new System.Drawing.Size(350, 45);
@@ -358,6 +362,7 @@
             // 
             // buttonDelService
             // 
+            this.buttonDelService.Enabled = false;
             this.buttonDelService.Location = new System.Drawing.Point(393, 127);
             this.buttonDelService.Name = "buttonDelService";
             this.buttonDelService.Size = new System.Drawing.Size(350, 45);
@@ -368,6 +373,7 @@
             // 
             // buttonChangeService
             // 
+            this.buttonChangeService.Enabled = false;
             this.buttonChangeService.Location = new System.Drawing.Point(393, 66);
             this.buttonChangeService.Name = "buttonChangeService";
             this.buttonChangeService.Size = new System.Drawing.Size(350, 45);

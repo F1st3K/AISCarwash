@@ -57,6 +57,12 @@ namespace AISCarwash
         {
             _currentRow = dataGridView.Rows[dataGridView.CurrentCell.RowIndex];
             _currentRow.Selected = true;
+            buttonChangeClient.Enabled = true;
+            buttonChangeService.Enabled = true;
+            buttonChangeWasher.Enabled = true;
+            buttonDelClient.Enabled = true;
+            buttonDelService.Enabled = true;
+            buttonDelWasher.Enabled = true;
         }
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -64,6 +64,8 @@ namespace AISCarwash
         {
             _currentRow = dataGridView.Rows[dataGridView.CurrentCell.RowIndex];
             _currentRow.Selected = true;
+            buttonChange.Enabled = true;
+            buttonDelete.Enabled = true;
             GetDateChange();
         }
         private void GetDateChange()
@@ -115,6 +117,16 @@ namespace AISCarwash
             MySqlConnecter.QueryDeleteInTable(table, condition);
             UpdateGridView();
             ResetChange();
+        }
+
+        private void buttonRandPwdForChange_Click(object sender, EventArgs e)
+        {
+            textChangePassword.Text = new RandomPassword(8, 25).Password;
+        }
+
+        private void buttonRandPwdForCreate_Click(object sender, EventArgs e)
+        {
+            textCreatePassword.Text = new RandomPassword(8, 25).Password;
         }
     }
 }
