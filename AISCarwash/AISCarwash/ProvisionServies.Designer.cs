@@ -148,6 +148,7 @@
             this.buttonAddClient.TabIndex = 42;
             this.buttonAddClient.Text = "Добавить";
             this.buttonAddClient.UseVisualStyleBackColor = true;
+            this.buttonAddClient.Click += new System.EventHandler(this.buttonAddClient_Click);
             // 
             // label7
             // 
@@ -255,6 +256,7 @@
             this.buttonProvisionService.TabIndex = 59;
             this.buttonProvisionService.Text = "Провести услугу";
             this.buttonProvisionService.UseVisualStyleBackColor = true;
+            this.buttonProvisionService.Click += new System.EventHandler(this.buttonProvisionService_Click);
             // 
             // ProvisionServies
             // 
@@ -274,9 +276,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProvisionServies";
             this.Text = "ProvisionServies";
+            this.Load += new System.EventHandler(this.ProvisionServies_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupAddClient.ResumeLayout(false);
