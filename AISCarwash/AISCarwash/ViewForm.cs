@@ -13,7 +13,7 @@ namespace AISCarwash
     public partial class ViewForm : Form
     {
         private string _mode;
-        private string tableName = "provisionService";
+        private string table = "provisionService";
         private DataGridViewRow _currentRow;
         public ViewForm(string mode)
         {
@@ -30,15 +30,28 @@ namespace AISCarwash
         }
         private void UpdateGridView()
         {
-            string column = "*";
-            string condition = $"EXISTS (SELECT {column} FROM {tableName})";
+            string column = 
+                "ProvisionService.idProvisionService, " +
+                "listClients.Surname, " +
+                "listClients.Name, " +
+                "listClients.ModelCar, " +
+                "listServices.ServiceName, " +
+                "listServices.ServicePrice, " +
+                "listWashers.Surname, " +
+                "listWashers.Name";
+            string tableName = "ProvisionService, listClients, listServices, listWashers";
+            string condition = 
+                "ProvisionService.idClient = listClients.idClient AND " +
+                "ProvisionService.idService = listServices.idService AND " +
+                "ProvisionService.idWasher = listWashers.idWasher";
+
             dataGridView.DataSource = MySqlConnecter.QueryReturnTable(column, tableName, condition);
             counterTable.Text = dataGridView.RowCount.ToString();
         }
         private void DeleteCurrentRow()
         {
             string condition = $"{_currentRow.Cells[0].OwningColumn.Name} = {_currentRow.Cells[0].Value.ToString()}";
-            MySqlConnecter.QueryDeleteInTable(tableName, condition);
+            MySqlConnecter.QueryDeleteInTable(table, condition);
             UpdateGridView();
         }
         private void WarningDeleteCurrentRow()
