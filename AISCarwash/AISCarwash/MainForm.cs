@@ -62,5 +62,12 @@ namespace AISCarwash
             ChangeForm form = new ChangeForm(_mode);
             form.Show();
         }
+
+        private void buttonProvisionServies_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ProvisionServies form = new ProvisionServies(_mode);
+            form.Show();
+        }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonChange = new System.Windows.Forms.Button();
-            this.buttonServies = new System.Windows.Forms.Button();
+            this.buttonProvisionServies = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.buttonView = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
@@ -57,14 +57,15 @@
             this.buttonChange.UseVisualStyleBackColor = true;
             this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
-            // buttonServies
+            // buttonProvisionServies
             // 
-            this.buttonServies.Location = new System.Drawing.Point(93, 147);
-            this.buttonServies.Name = "buttonServies";
-            this.buttonServies.Size = new System.Drawing.Size(297, 72);
-            this.buttonServies.TabIndex = 2;
-            this.buttonServies.Text = "Предоставление услуг";
-            this.buttonServies.UseVisualStyleBackColor = true;
+            this.buttonProvisionServies.Location = new System.Drawing.Point(93, 147);
+            this.buttonProvisionServies.Name = "buttonProvisionServies";
+            this.buttonProvisionServies.Size = new System.Drawing.Size(297, 72);
+            this.buttonProvisionServies.TabIndex = 2;
+            this.buttonProvisionServies.Text = "Предоставление услуг";
+            this.buttonProvisionServies.UseVisualStyleBackColor = true;
+            this.buttonProvisionServies.Click += new System.EventHandler(this.buttonProvisionServies_Click);
             // 
             // exit
             // 
@@ -82,7 +83,7 @@
             this.buttonView.Name = "buttonView";
             this.buttonView.Size = new System.Drawing.Size(297, 72);
             this.buttonView.TabIndex = 4;
-            this.buttonView.Text = "Просмотр БД";
+            this.buttonView.Text = "просмотр предоставленных услуг";
             this.buttonView.UseVisualStyleBackColor = true;
             // 
             // buttonInfo
@@ -113,7 +114,7 @@
             this.Controls.Add(this.buttonInfo);
             this.Controls.Add(this.buttonView);
             this.Controls.Add(this.exit);
-            this.Controls.Add(this.buttonServies);
+            this.Controls.Add(this.buttonProvisionServies);
             this.Controls.Add(this.buttonChange);
             this.Controls.Add(this.buttonAdd);
             this.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -131,7 +132,7 @@
 
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonChange;
-        private System.Windows.Forms.Button buttonServies;
+        private System.Windows.Forms.Button buttonProvisionServies;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Button buttonView;
         private System.Windows.Forms.Button buttonInfo;
