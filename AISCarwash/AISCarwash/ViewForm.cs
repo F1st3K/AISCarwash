@@ -13,6 +13,8 @@ namespace AISCarwash
     public partial class ViewForm : Form
     {
         private string _mode;
+        private string tableName = "provisionService";
+        private DataGridViewRow _currentRow;
         public ViewForm(string mode)
         {
             InitializeComponent();
@@ -28,11 +30,42 @@ namespace AISCarwash
         }
         private void UpdateGridView()
         {
-            string tableName = "provisionService";
             string column = "*";
             string condition = $"EXISTS (SELECT {column} FROM {tableName})";
             dataGridView.DataSource = MySqlConnecter.QueryReturnTable(column, tableName, condition);
             counterTable.Text = dataGridView.RowCount.ToString();
+        }
+        private void DeleteCurrentRow()
+        {
+            string condition = $"{_currentRow.Cells[0].OwningColumn.Name} = {_currentRow.Cells[0].Value.ToString()}";
+            MySqlConnecter.QueryDeleteInTable(tableName, condition);
+            UpdateGridView();
+        }
+        private void WarningDeleteCurrentRow()
+        {
+            string row = "";
+            for (int i = 0; i < dataGridView.Columns.Count; i++) row += "\t" + _currentRow.Cells[i].Value.ToString();
+            DialogResult dialogResult = MessageBox.Show($"Вы действительно хотите удалить следующую запись?: \n{row}", "Внимание! УДАЛЕНИЕ!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+            if (dialogResult == DialogResult.Yes)
+                DeleteCurrentRow();
+        }
+
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _currentRow = dataGridView.Rows[dataGridView.CurrentCell.RowIndex];
+            _currentRow.Selected = true;
+        }
+
+        private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _currentRow = dataGridView.Rows[dataGridView.CurrentCell.RowIndex];
+            _currentRow.Selected = true;
+            WarningDeleteCurrentRow();
+        }
+
+        private void ViewForm_Load(object sender, EventArgs e)
+        {
+            UpdateGridView();
         }
     }
 }

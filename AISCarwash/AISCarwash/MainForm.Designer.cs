@@ -85,6 +85,7 @@
             this.buttonView.TabIndex = 4;
             this.buttonView.Text = "просмотр предоставленных услуг";
             this.buttonView.UseVisualStyleBackColor = true;
+            this.buttonView.Click += new System.EventHandler(this.buttonView_Click);
             // 
             // buttonInfo
             // 
