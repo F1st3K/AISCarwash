@@ -43,7 +43,7 @@ namespace AISCarwash
             string values = $"DEFAULT, '{textNameClient.Text}', '{textSurnameClient.Text}', '{textPatronymicClient.Text}', '{textModelCarClient.Text}'";
             MySqlConnecter.QueryAddInTable(table, values);
             selectAddClient.Checked = false;
-            UpdateBox();
+            UpdateBoxes();
             ResetAddClient();
         }
         private void ResetAddClient()
@@ -56,18 +56,20 @@ namespace AISCarwash
 
         private void ProvisionServies_Load(object sender, EventArgs e)
         {
-            UpdateBox();
+            UpdateBoxes();
         }
-        private void UpdateBox()
+        private void UpdateBoxes()
         {
             selectClient.DropDownStyle = ComboBoxStyle.DropDownList;
             selectClient.DataSource = ParseData("*", "listClients");
             idClients = ParseData("idClient", "listClients");
             selectClient.SelectedIndex = selectClient.Items.Count - 1;
+
             selectService.DropDownStyle = ComboBoxStyle.DropDownList;
             selectService.DataSource = ParseData("*", "listServices");
             idServices = ParseData("idService", "listServices");
             selectService.SelectedIndex = selectService.Items.Count - 1;
+
             selectWasher.DropDownStyle = ComboBoxStyle.DropDownList;
             selectWasher.DataSource = ParseData("*", "listWashers");
             idWashers = ParseData("idWasher", "listWashers");
