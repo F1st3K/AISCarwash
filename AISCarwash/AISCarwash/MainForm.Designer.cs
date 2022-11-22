@@ -95,6 +95,7 @@
             this.buttonInfo.TabIndex = 5;
             this.buttonInfo.Text = "О разработчике";
             this.buttonInfo.UseVisualStyleBackColor = true;
+            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
             // 
             // buttonUserControl
             // 

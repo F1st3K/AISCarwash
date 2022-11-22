@@ -67,6 +67,12 @@
     <Compile Include="ChangeForm.Designer.cs">
       <DependentUpon>ChangeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeveloperInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeveloperInfoForm.Designer.cs">
+      <DependentUpon>DeveloperInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeForm.resx">
       <DependentUpon>ChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeveloperInfoForm.resx">
+      <DependentUpon>DeveloperInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
