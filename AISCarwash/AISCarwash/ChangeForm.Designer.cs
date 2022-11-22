@@ -117,6 +117,7 @@
             this.textSurnameWasher.Location = new System.Drawing.Point(8, 91);
             this.textSurnameWasher.Mask = "???????????????";
             this.textSurnameWasher.Name = "textSurnameWasher";
+            this.textSurnameWasher.PromptChar = ' ';
             this.textSurnameWasher.Size = new System.Drawing.Size(227, 31);
             this.textSurnameWasher.TabIndex = 40;
             // 
@@ -125,6 +126,7 @@
             this.textNameWasher.Location = new System.Drawing.Point(8, 29);
             this.textNameWasher.Mask = "???????????????";
             this.textNameWasher.Name = "textNameWasher";
+            this.textNameWasher.PromptChar = ' ';
             this.textNameWasher.Size = new System.Drawing.Size(227, 31);
             this.textNameWasher.TabIndex = 39;
             // 
@@ -219,8 +221,9 @@
             // textModelCarClient
             // 
             this.textModelCarClient.Location = new System.Drawing.Point(266, 31);
-            this.textModelCarClient.Mask = "?????????????????????????";
+            this.textModelCarClient.Mask = "aaaaaaaaaaaaaaaaaaaaaaaaa";
             this.textModelCarClient.Name = "textModelCarClient";
+            this.textModelCarClient.PromptChar = ' ';
             this.textModelCarClient.Size = new System.Drawing.Size(350, 31);
             this.textModelCarClient.TabIndex = 48;
             // 
@@ -246,6 +249,7 @@
             this.textSurnameClient.Location = new System.Drawing.Point(8, 89);
             this.textSurnameClient.Mask = "???????????????";
             this.textSurnameClient.Name = "textSurnameClient";
+            this.textSurnameClient.PromptChar = ' ';
             this.textSurnameClient.Size = new System.Drawing.Size(227, 31);
             this.textSurnameClient.TabIndex = 45;
             // 
@@ -254,6 +258,7 @@
             this.textNameClient.Location = new System.Drawing.Point(8, 29);
             this.textNameClient.Mask = "???????????????";
             this.textNameClient.Name = "textNameClient";
+            this.textNameClient.PromptChar = ' ';
             this.textNameClient.Size = new System.Drawing.Size(227, 31);
             this.textNameClient.TabIndex = 44;
             // 
@@ -325,8 +330,9 @@
             // textNameService
             // 
             this.textNameService.Location = new System.Drawing.Point(8, 66);
-            this.textNameService.Mask = "?????????????????????????????????????????????";
+            this.textNameService.Mask = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             this.textNameService.Name = "textNameService";
+            this.textNameService.PromptChar = ' ';
             this.textNameService.Size = new System.Drawing.Size(374, 31);
             this.textNameService.TabIndex = 48;
             // 

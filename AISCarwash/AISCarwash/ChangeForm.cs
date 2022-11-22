@@ -206,6 +206,7 @@ namespace AISCarwash
 
         private void ChangeForm_Load(object sender, EventArgs e)
         {
+            dateOBWasher.MaxDate = DateTime.Today;
             UpdateGridView();
         }
     }

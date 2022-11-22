@@ -118,6 +118,8 @@ namespace AISCarwash
 
         private void AddForm_Load(object sender, EventArgs e)
         {
+            DateTime Now = DateTime.Today;
+            dateOBWasher.MaxDate = new DateTime(Now.Year - 14, Now.Month, Now.Day);
             UpdateGridView();
         }
 

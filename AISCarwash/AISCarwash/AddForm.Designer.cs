@@ -105,6 +105,7 @@
             this.textPatronymicWasher.Location = new System.Drawing.Point(105, 152);
             this.textPatronymicWasher.Mask = "???????????????";
             this.textPatronymicWasher.Name = "textPatronymicWasher";
+            this.textPatronymicWasher.PromptChar = ' ';
             this.textPatronymicWasher.Size = new System.Drawing.Size(227, 31);
             this.textPatronymicWasher.TabIndex = 35;
             // 
@@ -113,6 +114,7 @@
             this.textSurnameWasher.Location = new System.Drawing.Point(105, 92);
             this.textSurnameWasher.Mask = "???????????????";
             this.textSurnameWasher.Name = "textSurnameWasher";
+            this.textSurnameWasher.PromptChar = ' ';
             this.textSurnameWasher.Size = new System.Drawing.Size(227, 31);
             this.textSurnameWasher.TabIndex = 34;
             // 
@@ -121,6 +123,7 @@
             this.textNameWasher.Location = new System.Drawing.Point(105, 30);
             this.textNameWasher.Mask = "???????????????";
             this.textNameWasher.Name = "textNameWasher";
+            this.textNameWasher.PromptChar = ' ';
             this.textNameWasher.Size = new System.Drawing.Size(227, 31);
             this.textNameWasher.TabIndex = 33;
             // 
@@ -204,6 +207,7 @@
             this.textPatronymicClient.Location = new System.Drawing.Point(105, 152);
             this.textPatronymicClient.Mask = "???????????????";
             this.textPatronymicClient.Name = "textPatronymicClient";
+            this.textPatronymicClient.PromptChar = ' ';
             this.textPatronymicClient.Size = new System.Drawing.Size(227, 31);
             this.textPatronymicClient.TabIndex = 40;
             // 
@@ -212,6 +216,7 @@
             this.textSurnameClient.Location = new System.Drawing.Point(105, 90);
             this.textSurnameClient.Mask = "???????????????";
             this.textSurnameClient.Name = "textSurnameClient";
+            this.textSurnameClient.PromptChar = ' ';
             this.textSurnameClient.Size = new System.Drawing.Size(227, 31);
             this.textSurnameClient.TabIndex = 39;
             // 
@@ -220,14 +225,16 @@
             this.textNameClient.Location = new System.Drawing.Point(105, 30);
             this.textNameClient.Mask = "???????????????";
             this.textNameClient.Name = "textNameClient";
+            this.textNameClient.PromptChar = ' ';
             this.textNameClient.Size = new System.Drawing.Size(227, 31);
             this.textNameClient.TabIndex = 38;
             // 
             // textModelCarClient
             // 
             this.textModelCarClient.Location = new System.Drawing.Point(363, 30);
-            this.textModelCarClient.Mask = "?????????????????????????";
+            this.textModelCarClient.Mask = "aaaaaaaaaaaaaaaaaaaaaaaaa";
             this.textModelCarClient.Name = "textModelCarClient";
+            this.textModelCarClient.PromptChar = ' ';
             this.textModelCarClient.Size = new System.Drawing.Size(350, 31);
             this.textModelCarClient.TabIndex = 37;
             // 
@@ -295,8 +302,9 @@
             // textNameService
             // 
             this.textNameService.Location = new System.Drawing.Point(325, 32);
-            this.textNameService.Mask = "????????????????????????????????????????";
+            this.textNameService.Mask = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             this.textNameService.Name = "textNameService";
+            this.textNameService.PromptChar = ' ';
             this.textNameService.Size = new System.Drawing.Size(374, 31);
             this.textNameService.TabIndex = 44;
             // 
@@ -347,7 +355,7 @@
             this.BackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 30);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 

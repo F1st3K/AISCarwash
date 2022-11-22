@@ -158,6 +158,7 @@
             this.textChangeFullname.Location = new System.Drawing.Point(265, 30);
             this.textChangeFullname.Mask = "?????????????????????????????????????????????";
             this.textChangeFullname.Name = "textChangeFullname";
+            this.textChangeFullname.PromptChar = ' ';
             this.textChangeFullname.Size = new System.Drawing.Size(350, 31);
             this.textChangeFullname.TabIndex = 36;
             // 
@@ -277,6 +278,7 @@
             this.textCreateFullname.Location = new System.Drawing.Point(265, 30);
             this.textCreateFullname.Mask = "?????????????????????????????????????????????";
             this.textCreateFullname.Name = "textCreateFullname";
+            this.textCreateFullname.PromptChar = ' ';
             this.textCreateFullname.Size = new System.Drawing.Size(350, 31);
             this.textCreateFullname.TabIndex = 40;
             // 

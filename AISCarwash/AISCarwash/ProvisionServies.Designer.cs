@@ -86,6 +86,7 @@
             this.textPatronymicClient.Location = new System.Drawing.Point(38, 174);
             this.textPatronymicClient.Mask = "???????????????";
             this.textPatronymicClient.Name = "textPatronymicClient";
+            this.textPatronymicClient.PromptChar = ' ';
             this.textPatronymicClient.Size = new System.Drawing.Size(227, 31);
             this.textPatronymicClient.TabIndex = 49;
             // 
@@ -94,6 +95,7 @@
             this.textSurnameClient.Location = new System.Drawing.Point(38, 112);
             this.textSurnameClient.Mask = "???????????????";
             this.textSurnameClient.Name = "textSurnameClient";
+            this.textSurnameClient.PromptChar = ' ';
             this.textSurnameClient.Size = new System.Drawing.Size(227, 31);
             this.textSurnameClient.TabIndex = 48;
             // 
@@ -102,14 +104,16 @@
             this.textNameClient.Location = new System.Drawing.Point(38, 52);
             this.textNameClient.Mask = "???????????????";
             this.textNameClient.Name = "textNameClient";
+            this.textNameClient.PromptChar = ' ';
             this.textNameClient.Size = new System.Drawing.Size(227, 31);
             this.textNameClient.TabIndex = 47;
             // 
             // textModelCarClient
             // 
             this.textModelCarClient.Location = new System.Drawing.Point(296, 52);
-            this.textModelCarClient.Mask = "?????????????????????????";
+            this.textModelCarClient.Mask = "aaaaaaaaaaaaaaaaaaaaaaaaa";
             this.textModelCarClient.Name = "textModelCarClient";
+            this.textModelCarClient.PromptChar = ' ';
             this.textModelCarClient.Size = new System.Drawing.Size(350, 31);
             this.textModelCarClient.TabIndex = 46;
             // 
