@@ -46,6 +46,7 @@ namespace AISCarwash
         {
             this.Close();
             UserControlForm form = new UserControlForm(_mode);
+            form.Text = buttonUserControl.Text;
             form.Show();
         }
 
@@ -53,6 +54,7 @@ namespace AISCarwash
         {
             this.Close();
             AddForm form = new AddForm(_mode);
+            form.Text = buttonAdd.Text;
             form.Show();
         }
 
@@ -60,6 +62,7 @@ namespace AISCarwash
         {
             this.Close();
             ChangeForm form = new ChangeForm(_mode);
+            form.Text = buttonChange.Text;
             form.Show();
         }
 
@@ -67,6 +70,7 @@ namespace AISCarwash
         {
             this.Close();
             ProvisionServies form = new ProvisionServies(_mode);
+            form.Text = buttonProvisionServies.Text;
             form.Show();
         }
 
@@ -74,6 +78,7 @@ namespace AISCarwash
         {
             this.Close();
             ViewForm form = new ViewForm(_mode);
+            form.Text = buttonView.Text;
             form.Show();
         }
 
@@ -81,6 +86,7 @@ namespace AISCarwash
         {
             this.Close();
             DeveloperInfoForm form = new DeveloperInfoForm(_mode);
+            form.Text = buttonInfo.Text;
             form.Show();
         }
     }

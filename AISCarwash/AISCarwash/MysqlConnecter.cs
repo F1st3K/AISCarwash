@@ -98,7 +98,10 @@ namespace AISCarwash
             for (int i = 0; i < parameters.Length; i++)
             {
                 if (parameters[i] == string.Empty)
+                {
+                    MessageBox.Show("Слишком мало данных для формирования записи", "EROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return true;
+                }
             }
             return false;
         }

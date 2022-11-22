@@ -59,7 +59,7 @@
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(190, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 47);
+            this.label1.Size = new System.Drawing.Size(236, 46);
             this.label1.TabIndex = 7;
             this.label1.Text = "Авторизация:";
             // 
@@ -100,9 +100,9 @@
             this.Controls.Add(this.textLogin);
             this.Controls.Add(this.buttonLogIn);
             this.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AutorizationForm";
-            this.Text = "AutorizationForm";
+            this.Text = "Вход";
             this.Load += new System.EventHandler(this.AutorizationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

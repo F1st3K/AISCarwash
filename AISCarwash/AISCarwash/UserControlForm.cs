@@ -81,7 +81,7 @@ namespace AISCarwash
         {
             if (MySqlConnecter.StringsIsEmpty(textChangeLogin.Text, textChangePassword.Text))
                 return;
-            if (ExistUserLogin(textChangeLogin.Text))
+            if (ExistUserLogin(textChangeLogin.Text, 1))
                 return;
             string table = "users";
             string values = $" {_currentRow.Cells[1].OwningColumn.Name} = '{textChangeFullname.Text}', " +
@@ -98,7 +98,7 @@ namespace AISCarwash
         {
             if(MySqlConnecter.StringsIsEmpty(textCreateLogin.Text, textCreatePassword.Text))
                 return;
-            if (ExistUserLogin(textCreateLogin.Text))
+            if (ExistUserLogin(textCreateLogin.Text, 0))
                 return;
             string table = "users";
             string values = $"DEFAULT, '{textCreateFullname.Text}', '{textCreateLogin.Text}', '{textCreatePassword.Text}', '{CreateMode.Text}'";
@@ -106,13 +106,13 @@ namespace AISCarwash
             UpdateGridView();
             ResetCreate();
         }
-        private bool ExistUserLogin(string login)
+        private bool ExistUserLogin(string login, int countLogin)
         {
             string column = "*";
             string tableName = "users";
             string condition = $"login = '{login}'";
             DataTable table = MySqlConnecter.QueryReturnTable(column, tableName, condition);
-            if (table.Rows.Count > 0)
+            if (table.Rows.Count > countLogin)
             {
                 MessageBox.Show("Пользователь с таким логином уже существует", "EROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
