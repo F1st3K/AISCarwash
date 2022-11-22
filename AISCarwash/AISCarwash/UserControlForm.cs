@@ -57,6 +57,7 @@ namespace AISCarwash
             string column = "*";
             string condition = $"EXISTS (SELECT {column} FROM {tableName})";
             dataGridView.DataSource = MySqlConnecter.QueryReturnTable(column, tableName, condition);
+            dataGridView = MySqlConnecter.ChangeColumnsName(dataGridView, "id", "Имя", "Логин", "Пароль", "Роль");
             counterTable.Text = dataGridView.RowCount.ToString();
         }
 

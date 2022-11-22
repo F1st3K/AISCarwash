@@ -47,7 +47,12 @@ namespace AISCarwash
 
             dataGridView.DataSource = MySqlConnecter.QueryReturnTable(column, tableName, condition);
             counterTable.Text = dataGridView.RowCount.ToString();
-        }
+            dataGridView = MySqlConnecter.ChangeColumnsName(dataGridView,
+                                    "id", "Фамилия клиента", "Имя клиента",
+                                    "Модель машины", "Наименование услуги",
+                                    "Цена", "Фамилия мойщика", "Имя мойщика");
+        }                                                  
+                                                        
         private void DeleteCurrentRow()
         {
             string condition = $"{_currentRow.Cells[0].OwningColumn.Name} = {_currentRow.Cells[0].Value.ToString()}";

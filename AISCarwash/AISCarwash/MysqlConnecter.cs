@@ -82,6 +82,17 @@ namespace AISCarwash
                 MessageBox.Show(ex.Message + "\n" + query, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
+        public static DataGridView ChangeColumnsName(DataGridView dgv, params string[] Names)
+        {
+            int lenght;
+            if (dgv.ColumnCount < Names.Length)
+                lenght = dgv.ColumnCount;
+            else 
+                lenght = Names.Length;
+            for (int i = 0; i < lenght; i++)
+                dgv.Columns[i].HeaderText = Names[i];
+            return dgv;
+        }
         public static bool StringsIsEmpty(params string[] parameters)
         {
             for (int i = 0; i < parameters.Length; i++)

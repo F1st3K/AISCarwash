@@ -28,10 +28,10 @@ namespace AISCarwash
             form.Show();
         }
 
-        private string GetCurrentTable()
+        private string GetCurrentTable(int SelectedIndex)
         {
             string tableName = "";
-            switch (tabControl.SelectedIndex)
+            switch (SelectedIndex)
             {
                 case 0: tableName = "ListWashers"; break;
                 case 1: tableName = "ListClients"; break;
@@ -41,13 +41,27 @@ namespace AISCarwash
             }
             return tableName;
         }
+        private string[] GetCurrentNameColumns(int SelectedIndex)
+        {
+            string[] NameColumns = new string[] { };
+            switch (SelectedIndex)
+            {
+                case 0: NameColumns = new string[] { "id", "Имя", "Фамилия", "Отчество", "Дата рождения" }; break;
+                case 1: NameColumns = new string[] { "id", "Имя", "Фамилия", "Отчество", "Модель машины" }; break;
+                case 2: NameColumns = new string[] { "id", "Наименование улуги", "Цена" }; break;
+                default:
+                    break;
+            }
+            return NameColumns;
+        }
 
         private void UpdateGridView()
         {
-            string tableName = GetCurrentTable();
+            string tableName = GetCurrentTable(tabControl.SelectedIndex);
             string column = "*";
             string condition = $"EXISTS (SELECT {column} FROM {tableName})";
             dataGridView.DataSource = MySqlConnecter.QueryReturnTable(column, tableName, condition);
+            dataGridView = MySqlConnecter.ChangeColumnsName(dataGridView, GetCurrentNameColumns(tabControl.SelectedIndex));
             counterTable.Text = dataGridView.RowCount.ToString();
         }
 
@@ -73,7 +87,7 @@ namespace AISCarwash
         {
             if (MySqlConnecter.StringsIsEmpty(textNameWasher.Text, textSurnameWasher.Text))
                 return;
-            string table = GetCurrentTable();
+            string table = GetCurrentTable(tabControl.SelectedIndex);
             string values = $"DEFAULT, '{textNameWasher.Text}', '{textSurnameWasher.Text}', '{textPatronymicWasher.Text}', '{dateOBWasher.Value.ToString("yyyy-MM-dd")}'"; 
             MySqlConnecter.QueryAddInTable(table, values);
             UpdateGridView();
@@ -84,7 +98,7 @@ namespace AISCarwash
         {
             if (MySqlConnecter.StringsIsEmpty(textNameClient.Text, textSurnameClient.Text, textModelCarClient.Text))
                 return;
-            string table = GetCurrentTable();
+            string table = GetCurrentTable(tabControl.SelectedIndex);
             string values = $"DEFAULT, '{textNameClient.Text}', '{textSurnameClient.Text}', '{textPatronymicClient.Text}', '{textModelCarClient.Text}'";
             MySqlConnecter.QueryAddInTable(table, values);
             UpdateGridView();
@@ -95,7 +109,7 @@ namespace AISCarwash
         {
             if (MySqlConnecter.StringsIsEmpty(textNameService.Text))
                 return;
-            string table = GetCurrentTable();
+            string table = GetCurrentTable(tabControl.SelectedIndex);
             string values = $"DEFAULT, '{textNameService.Text}', {textPriceService.Text}";
             MySqlConnecter.QueryAddInTable(table, values);
             UpdateGridView();

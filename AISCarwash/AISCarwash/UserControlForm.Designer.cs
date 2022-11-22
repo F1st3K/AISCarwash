@@ -33,6 +33,9 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.TabChange = new System.Windows.Forms.TabPage();
+            this.textChangeLogin = new System.Windows.Forms.TextBox();
+            this.textChangePassword = new System.Windows.Forms.TextBox();
+            this.buttonRandPwdForChange = new System.Windows.Forms.Button();
             this.textChangeFullname = new System.Windows.Forms.MaskedTextBox();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,6 +45,9 @@
             this.buttonChange = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textCreateLogin = new System.Windows.Forms.TextBox();
+            this.textCreatePassword = new System.Windows.Forms.TextBox();
+            this.buttonRandPwdForCreate = new System.Windows.Forms.Button();
             this.textCreateFullname = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,12 +57,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.counterTable = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.buttonRandPwdForChange = new System.Windows.Forms.Button();
-            this.buttonRandPwdForCreate = new System.Windows.Forms.Button();
-            this.textChangePassword = new System.Windows.Forms.TextBox();
-            this.textCreatePassword = new System.Windows.Forms.TextBox();
-            this.textCreateLogin = new System.Windows.Forms.TextBox();
-            this.textChangeLogin = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabControl.SuspendLayout();
@@ -71,14 +71,14 @@
             this.BackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // BackToolStripMenuItem
             // 
             this.BackToolStripMenuItem.Name = "BackToolStripMenuItem";
-            this.BackToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
+            this.BackToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.BackToolStripMenuItem.Text = "Назад";
             this.BackToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
@@ -86,6 +86,7 @@
             // 
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(0, 32);
             this.dataGridView.Name = "dataGridView";
@@ -126,6 +127,31 @@
             this.TabChange.TabIndex = 0;
             this.TabChange.Text = "Редактирование/Удаление";
             this.TabChange.UseVisualStyleBackColor = true;
+            // 
+            // textChangeLogin
+            // 
+            this.textChangeLogin.Location = new System.Drawing.Point(12, 30);
+            this.textChangeLogin.Name = "textChangeLogin";
+            this.textChangeLogin.Size = new System.Drawing.Size(227, 31);
+            this.textChangeLogin.TabIndex = 39;
+            // 
+            // textChangePassword
+            // 
+            this.textChangePassword.Location = new System.Drawing.Point(12, 91);
+            this.textChangePassword.MaxLength = 25;
+            this.textChangePassword.Name = "textChangePassword";
+            this.textChangePassword.Size = new System.Drawing.Size(227, 31);
+            this.textChangePassword.TabIndex = 38;
+            // 
+            // buttonRandPwdForChange
+            // 
+            this.buttonRandPwdForChange.Location = new System.Drawing.Point(12, 138);
+            this.buttonRandPwdForChange.Name = "buttonRandPwdForChange";
+            this.buttonRandPwdForChange.Size = new System.Drawing.Size(227, 45);
+            this.buttonRandPwdForChange.TabIndex = 37;
+            this.buttonRandPwdForChange.Text = "Генерировать пароль";
+            this.buttonRandPwdForChange.UseVisualStyleBackColor = true;
+            this.buttonRandPwdForChange.Click += new System.EventHandler(this.buttonRandPwdForChange_Click);
             // 
             // textChangeFullname
             // 
@@ -221,6 +247,31 @@
             this.tabPage2.Text = "Регистрация нового пользователя";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // textCreateLogin
+            // 
+            this.textCreateLogin.Location = new System.Drawing.Point(12, 30);
+            this.textCreateLogin.Name = "textCreateLogin";
+            this.textCreateLogin.Size = new System.Drawing.Size(227, 31);
+            this.textCreateLogin.TabIndex = 43;
+            // 
+            // textCreatePassword
+            // 
+            this.textCreatePassword.Location = new System.Drawing.Point(12, 91);
+            this.textCreatePassword.MaxLength = 25;
+            this.textCreatePassword.Name = "textCreatePassword";
+            this.textCreatePassword.Size = new System.Drawing.Size(227, 31);
+            this.textCreatePassword.TabIndex = 42;
+            // 
+            // buttonRandPwdForCreate
+            // 
+            this.buttonRandPwdForCreate.Location = new System.Drawing.Point(12, 138);
+            this.buttonRandPwdForCreate.Name = "buttonRandPwdForCreate";
+            this.buttonRandPwdForCreate.Size = new System.Drawing.Size(227, 45);
+            this.buttonRandPwdForCreate.TabIndex = 41;
+            this.buttonRandPwdForCreate.Text = "Генерировать пароль";
+            this.buttonRandPwdForCreate.UseVisualStyleBackColor = true;
+            this.buttonRandPwdForCreate.Click += new System.EventHandler(this.buttonRandPwdForCreate_Click);
+            // 
             // textCreateFullname
             // 
             this.textCreateFullname.Location = new System.Drawing.Point(265, 30);
@@ -300,56 +351,6 @@
             this.label10.Size = new System.Drawing.Size(204, 24);
             this.label10.TabIndex = 4;
             this.label10.Text = "Число строк в таблице:";
-            // 
-            // buttonRandPwdForChange
-            // 
-            this.buttonRandPwdForChange.Location = new System.Drawing.Point(12, 138);
-            this.buttonRandPwdForChange.Name = "buttonRandPwdForChange";
-            this.buttonRandPwdForChange.Size = new System.Drawing.Size(227, 45);
-            this.buttonRandPwdForChange.TabIndex = 37;
-            this.buttonRandPwdForChange.Text = "Генерировать пароль";
-            this.buttonRandPwdForChange.UseVisualStyleBackColor = true;
-            this.buttonRandPwdForChange.Click += new System.EventHandler(this.buttonRandPwdForChange_Click);
-            // 
-            // buttonRandPwdForCreate
-            // 
-            this.buttonRandPwdForCreate.Location = new System.Drawing.Point(12, 138);
-            this.buttonRandPwdForCreate.Name = "buttonRandPwdForCreate";
-            this.buttonRandPwdForCreate.Size = new System.Drawing.Size(227, 45);
-            this.buttonRandPwdForCreate.TabIndex = 41;
-            this.buttonRandPwdForCreate.Text = "Генерировать пароль";
-            this.buttonRandPwdForCreate.UseVisualStyleBackColor = true;
-            this.buttonRandPwdForCreate.Click += new System.EventHandler(this.buttonRandPwdForCreate_Click);
-            // 
-            // textChangePassword
-            // 
-            this.textChangePassword.Location = new System.Drawing.Point(12, 91);
-            this.textChangePassword.MaxLength = 25;
-            this.textChangePassword.Name = "textChangePassword";
-            this.textChangePassword.Size = new System.Drawing.Size(227, 31);
-            this.textChangePassword.TabIndex = 38;
-            // 
-            // textCreatePassword
-            // 
-            this.textCreatePassword.Location = new System.Drawing.Point(12, 91);
-            this.textCreatePassword.MaxLength = 25;
-            this.textCreatePassword.Name = "textCreatePassword";
-            this.textCreatePassword.Size = new System.Drawing.Size(227, 31);
-            this.textCreatePassword.TabIndex = 42;
-            // 
-            // textCreateLogin
-            // 
-            this.textCreateLogin.Location = new System.Drawing.Point(12, 30);
-            this.textCreateLogin.Name = "textCreateLogin";
-            this.textCreateLogin.Size = new System.Drawing.Size(227, 31);
-            this.textCreateLogin.TabIndex = 43;
-            // 
-            // textChangeLogin
-            // 
-            this.textChangeLogin.Location = new System.Drawing.Point(12, 30);
-            this.textChangeLogin.Name = "textChangeLogin";
-            this.textChangeLogin.Size = new System.Drawing.Size(227, 31);
-            this.textChangeLogin.TabIndex = 39;
             // 
             // UserControlForm
             // 
