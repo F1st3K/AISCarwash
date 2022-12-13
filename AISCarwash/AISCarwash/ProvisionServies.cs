@@ -40,7 +40,7 @@ namespace AISCarwash
             if (MySqlConnecter.StringsIsEmpty(textNameClient.Text, textSurnameClient.Text, textModelCarClient.Text))
                 return;
             string table = "listclients";
-            string values = $"DEFAULT, '{textNameClient.Text}', '{textSurnameClient.Text}', '{textPatronymicClient.Text}', '{textModelCarClient.Text}'";
+            string values = "DEFAULT, '"+textNameClient.Text+"', '"+textSurnameClient.Text+"', '"+textPatronymicClient.Text+"', '"+textModelCarClient.Text+"'";
             MySqlConnecter.QueryAddInTable(table, values);
             selectAddClient.Checked = false;
             UpdateBoxes();
@@ -77,7 +77,7 @@ namespace AISCarwash
         }
         private string[] ParseData(string column, string tableName)
         {
-            string condition = $"EXISTS (SELECT {column} FROM {tableName})";
+            string condition = "true";
             DataTable dt = MySqlConnecter.QueryReturnTable(column, tableName, condition);
             string[] data = new string[dt.Rows.Count];
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -93,7 +93,7 @@ namespace AISCarwash
             if (MySqlConnecter.StringsIsEmpty(selectClient.Text, selectService.Text, selectWasher.Text))
                 return;
             string tableName = "provisionService";
-            string values = $"DEFAULT, {idClients[selectClient.SelectedIndex]}, {idServices[selectService.SelectedIndex]}, {idWashers[selectWasher.SelectedIndex]}";
+            string values = "DEFAULT, " + idClients[selectClient.SelectedIndex] + ", " + idServices[selectService.SelectedIndex] + ", " + idWashers[selectWasher.SelectedIndex] + "";
             MySqlConnecter.QueryAddInTable(tableName, values);
             MessageBox.Show("проводка завершена успешно");
             BackToolStripMenuItem_Click(sender, e);

@@ -55,7 +55,7 @@ namespace AISCarwash
                                                         
         private void DeleteCurrentRow()
         {
-            string condition = $"{_currentRow.Cells[0].OwningColumn.Name} = {_currentRow.Cells[0].Value.ToString()}";
+            string condition = ""+_currentRow.Cells[0].OwningColumn.Name+" = "+_currentRow.Cells[0].Value.ToString()+"";
             MySqlConnecter.QueryDeleteInTable(table, condition);
             UpdateGridView();
         }
@@ -63,7 +63,7 @@ namespace AISCarwash
         {
             string row = "";
             for (int i = 0; i < dataGridView.Columns.Count; i++) row += "\t" + _currentRow.Cells[i].Value.ToString();
-            DialogResult dialogResult = MessageBox.Show($"Вы действительно хотите удалить следующую запись?: \n{row}", "Внимание! УДАЛЕНИЕ!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+            DialogResult dialogResult = MessageBox.Show("Вы действительно хотите удалить следующую запись?: \n" + row + "", "Внимание! УДАЛЕНИЕ!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
             if (dialogResult == DialogResult.Yes)
                 DeleteCurrentRow();
         }

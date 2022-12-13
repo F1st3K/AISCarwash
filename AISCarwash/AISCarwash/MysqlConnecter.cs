@@ -22,7 +22,7 @@ namespace AISCarwash
         public static DataTable QueryReturnTable(string column, string tableName, string condition)
         {
             DataTable table = new DataTable();
-            string query = $"SELECT {column} FROM {tableName} WHERE {condition};";
+            string query = "SELECT "+column+" FROM "+tableName+" WHERE "+condition+";";
             try 
             {
                 _dbConection.Open();
@@ -39,7 +39,7 @@ namespace AISCarwash
         }
         public static void QueryAddInTable(string tableName, string values)
         {
-            string query = $"INSERT INTO {tableName} VALUES ({values});";
+            string query = "INSERT INTO "+tableName+" VALUES ("+values+");";
             try
             {
                 _dbConection.Open();
@@ -54,7 +54,7 @@ namespace AISCarwash
         }
         public static void QueryChangeInTable(string tableName, string values, string condition)
         {
-            string query = $"UPDATE {tableName} SET {values} WHERE {condition};";
+            string query = "UPDATE "+tableName+" SET "+values+" WHERE "+condition+";";
             try
             {
                 _dbConection.Open();
@@ -68,8 +68,8 @@ namespace AISCarwash
             }
         }
         public static void QueryDeleteInTable(string table, string condition)
-        { 
-            string query = $"DELETE FROM {table} WHERE {condition};";
+        {
+            string query = "DELETE FROM " + table + " WHERE " + condition + ";";
             try
             {
                 _dbConection.Open();

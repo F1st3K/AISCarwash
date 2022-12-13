@@ -57,7 +57,7 @@ namespace AISCarwash
         {
             string tableName = GetCurrentTable(tabControl.SelectedIndex);
             string column = "*";
-            string condition = $"EXISTS (SELECT {column} FROM {tableName})";
+            string condition = "true";
             dataGridView.DataSource = MySqlConnecter.QueryReturnTable(column, tableName, condition);
             dataGridView = MySqlConnecter.ChangeColumnsName(dataGridView, GetCurrentNameColumns(tabControl.SelectedIndex));
             counterTable.Text = dataGridView.RowCount.ToString();
@@ -129,11 +129,11 @@ namespace AISCarwash
             if (MySqlConnecter.StringsIsEmpty(textNameWasher.Text, textSurnameWasher.Text))
                 return;
             string table = GetCurrentTable(tabControl.SelectedIndex);
-            string values = $" {_currentRow.Cells[1].OwningColumn.Name} = '{textNameWasher.Text}', " +
-                $" {_currentRow.Cells[2].OwningColumn.Name} = '{textSurnameWasher.Text}', " +
-                $" {_currentRow.Cells[3].OwningColumn.Name} = '{textPatronymicWasher.Text}', " +
-                $" {_currentRow.Cells[4].OwningColumn.Name} = '{dateOBWasher.Value.ToString("yyyy-MM-dd")}'";
-            string condition = $"{_currentRow.Cells[0].OwningColumn.Name} = {_currentRow.Cells[0].Value.ToString()}";
+            string values = " "+_currentRow.Cells[1].OwningColumn.Name+" = '"+textNameWasher.Text+"', " +
+                " "+_currentRow.Cells[2].OwningColumn.Name+" = '"+textSurnameWasher.Text+"', " +
+                " "+_currentRow.Cells[3].OwningColumn.Name+" = '"+textPatronymicWasher.Text+"', " +
+                " "+_currentRow.Cells[4].OwningColumn.Name+" = '"+dateOBWasher.Value.ToString("yyyy-MM-dd")+"'";
+            string condition = ""+_currentRow.Cells[0].OwningColumn.Name+" = "+_currentRow.Cells[0].Value.ToString()+"";
             MySqlConnecter.QueryChangeInTable(table, values, condition);
             UpdateGridView();
             ResetAll();
@@ -144,11 +144,11 @@ namespace AISCarwash
             if (MySqlConnecter.StringsIsEmpty(textNameClient.Text, textSurnameClient.Text, textModelCarClient.Text))
                 return;
             string table = GetCurrentTable(tabControl.SelectedIndex);
-            string values = $" {_currentRow.Cells[1].OwningColumn.Name} = '{textNameClient.Text}', " +
-                $" {_currentRow.Cells[2].OwningColumn.Name} = '{textSurnameClient.Text}', " +
-                $" {_currentRow.Cells[3].OwningColumn.Name} = '{textPatronymicClient.Text}', " +
-                $" {_currentRow.Cells[4].OwningColumn.Name} = '{textModelCarClient.Text}'";
-            string condition = $"{_currentRow.Cells[0].OwningColumn.Name} = {_currentRow.Cells[0].Value.ToString()}";
+            string values = " "+_currentRow.Cells[1].OwningColumn.Name+" = '"+textNameClient.Text+"', " +
+                " "+_currentRow.Cells[2].OwningColumn.Name+" = '"+textSurnameClient.Text+"', " +
+                " "+_currentRow.Cells[3].OwningColumn.Name+" = '"+textPatronymicClient.Text+"', " +
+                " "+_currentRow.Cells[4].OwningColumn.Name+" = '"+textModelCarClient.Text+"'";
+            string condition = ""+_currentRow.Cells[0].OwningColumn.Name+" = "+_currentRow.Cells[0].Value.ToString()+"";
             MySqlConnecter.QueryChangeInTable(table, values, condition);
             UpdateGridView();
             ResetAll();
@@ -159,9 +159,9 @@ namespace AISCarwash
             if (MySqlConnecter.StringsIsEmpty(textNameService.Text))
                 return;
             string table = GetCurrentTable(tabControl.SelectedIndex);
-            string values = $" {_currentRow.Cells[1].OwningColumn.Name} = '{textNameService.Text}', " +
-                $" {_currentRow.Cells[2].OwningColumn.Name} = {textPriceService.Text}";
-            string condition = $"{_currentRow.Cells[0].OwningColumn.Name} = {_currentRow.Cells[0].Value.ToString()}";
+            string values = " "+_currentRow.Cells[1].OwningColumn.Name+" = '"+textNameService.Text+"', " +
+                " "+_currentRow.Cells[2].OwningColumn.Name+" = "+textPriceService.Text+"";
+            string condition = ""+_currentRow.Cells[0].OwningColumn.Name+" = "+_currentRow.Cells[0].Value.ToString()+"";
             MySqlConnecter.QueryChangeInTable(table, values, condition);
             UpdateGridView();
             ResetAll();
@@ -169,7 +169,7 @@ namespace AISCarwash
         private void DeleteCurrentRow()
         {
             string table = GetCurrentTable(tabControl.SelectedIndex);
-            string condition = $"{_currentRow.Cells[0].OwningColumn.Name} = {_currentRow.Cells[0].Value.ToString()}";
+            string condition = "" + _currentRow.Cells[0].OwningColumn.Name + " = " + _currentRow.Cells[0].Value.ToString() + "";
             MySqlConnecter.QueryDeleteInTable(table, condition);
             UpdateGridView();
             ResetAll();
@@ -178,7 +178,7 @@ namespace AISCarwash
         {
             string row = "";
             for (int i = 0; i < dataGridView.Columns.Count; i++) row += "\t" + _currentRow.Cells[i].Value.ToString();
-            DialogResult dialogResult = MessageBox.Show($"Вы действительно хотите удалить следующую запись?: \n{row}", "Внимание! УДАЛЕНИЕ!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+            DialogResult dialogResult = MessageBox.Show("Вы действительно хотите удалить следующую запись?: \n"+row+"", "Внимание! УДАЛЕНИЕ!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
             if (dialogResult == DialogResult.Yes)
                 DeleteCurrentRow();
         }

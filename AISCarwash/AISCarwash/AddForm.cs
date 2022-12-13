@@ -59,7 +59,7 @@ namespace AISCarwash
         {
             string tableName = GetCurrentTable(tabControl.SelectedIndex);
             string column = "*";
-            string condition = $"EXISTS (SELECT {column} FROM {tableName})";
+            string condition = "true";
             dataGridView.DataSource = MySqlConnecter.QueryReturnTable(column, tableName, condition);
             dataGridView = MySqlConnecter.ChangeColumnsName(dataGridView, GetCurrentNameColumns(tabControl.SelectedIndex));
             counterTable.Text = dataGridView.RowCount.ToString();
@@ -88,7 +88,7 @@ namespace AISCarwash
             if (MySqlConnecter.StringsIsEmpty(textNameWasher.Text, textSurnameWasher.Text))
                 return;
             string table = GetCurrentTable(tabControl.SelectedIndex);
-            string values = $"DEFAULT, '{textNameWasher.Text}', '{textSurnameWasher.Text}', '{textPatronymicWasher.Text}', '{dateOBWasher.Value.ToString("yyyy-MM-dd")}'"; 
+            string values = "DEFAULT, '"+textNameWasher.Text+"', '"+textSurnameWasher.Text+"', '"+textPatronymicWasher.Text+"', '"+dateOBWasher.Value.ToString("yyyy-MM-dd")+"'"; 
             MySqlConnecter.QueryAddInTable(table, values);
             UpdateGridView();
             ResetAll();
@@ -99,7 +99,7 @@ namespace AISCarwash
             if (MySqlConnecter.StringsIsEmpty(textNameClient.Text, textSurnameClient.Text, textModelCarClient.Text))
                 return;
             string table = GetCurrentTable(tabControl.SelectedIndex);
-            string values = $"DEFAULT, '{textNameClient.Text}', '{textSurnameClient.Text}', '{textPatronymicClient.Text}', '{textModelCarClient.Text}'";
+            string values = "DEFAULT, '"+textNameClient.Text+"', '"+textSurnameClient.Text+"', '"+textPatronymicClient.Text+"', '"+textModelCarClient.Text+"'";
             MySqlConnecter.QueryAddInTable(table, values);
             UpdateGridView();
             ResetAll();
@@ -110,7 +110,7 @@ namespace AISCarwash
             if (MySqlConnecter.StringsIsEmpty(textNameService.Text))
                 return;
             string table = GetCurrentTable(tabControl.SelectedIndex);
-            string values = $"DEFAULT, '{textNameService.Text}', {textPriceService.Text}";
+            string values = "DEFAULT, '" + textNameService.Text + "', " + textPriceService.Text + "";
             MySqlConnecter.QueryAddInTable(table, values);
             UpdateGridView();
             ResetAll();

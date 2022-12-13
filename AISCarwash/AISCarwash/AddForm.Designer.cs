@@ -92,10 +92,10 @@
             this.tabWashers.Controls.Add(this.label3);
             this.tabWashers.Controls.Add(this.buttonAddWasher);
             this.tabWashers.Controls.Add(this.label1);
-            this.tabWashers.Location = new System.Drawing.Point(4, 33);
+            this.tabWashers.Location = new System.Drawing.Point(4, 28);
             this.tabWashers.Name = "tabWashers";
             this.tabWashers.Padding = new System.Windows.Forms.Padding(3);
-            this.tabWashers.Size = new System.Drawing.Size(998, 189);
+            this.tabWashers.Size = new System.Drawing.Size(998, 194);
             this.tabWashers.TabIndex = 0;
             this.tabWashers.Text = "Сотрудники (мойщики)";
             this.tabWashers.UseVisualStyleBackColor = true;
@@ -106,7 +106,7 @@
             this.textPatronymicWasher.Mask = "???????????????";
             this.textPatronymicWasher.Name = "textPatronymicWasher";
             this.textPatronymicWasher.PromptChar = ' ';
-            this.textPatronymicWasher.Size = new System.Drawing.Size(227, 31);
+            this.textPatronymicWasher.Size = new System.Drawing.Size(227, 26);
             this.textPatronymicWasher.TabIndex = 35;
             // 
             // textSurnameWasher
@@ -115,7 +115,7 @@
             this.textSurnameWasher.Mask = "???????????????";
             this.textSurnameWasher.Name = "textSurnameWasher";
             this.textSurnameWasher.PromptChar = ' ';
-            this.textSurnameWasher.Size = new System.Drawing.Size(227, 31);
+            this.textSurnameWasher.Size = new System.Drawing.Size(227, 26);
             this.textSurnameWasher.TabIndex = 34;
             // 
             // textNameWasher
@@ -124,7 +124,7 @@
             this.textNameWasher.Mask = "???????????????";
             this.textNameWasher.Name = "textNameWasher";
             this.textNameWasher.PromptChar = ' ';
-            this.textNameWasher.Size = new System.Drawing.Size(227, 31);
+            this.textNameWasher.Size = new System.Drawing.Size(227, 26);
             this.textNameWasher.TabIndex = 33;
             // 
             // label8
@@ -132,7 +132,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(360, 3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(140, 24);
+            this.label8.Size = new System.Drawing.Size(114, 19);
             this.label8.TabIndex = 32;
             this.label8.Text = "Дата рождения:";
             // 
@@ -142,7 +142,7 @@
             this.dateOBWasher.MaxDate = new System.DateTime(2022, 11, 19, 0, 0, 0, 0);
             this.dateOBWasher.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateOBWasher.Name = "dateOBWasher";
-            this.dateOBWasher.Size = new System.Drawing.Size(350, 31);
+            this.dateOBWasher.Size = new System.Drawing.Size(350, 26);
             this.dateOBWasher.TabIndex = 31;
             this.dateOBWasher.Value = new System.DateTime(2022, 11, 19, 0, 0, 0, 0);
             // 
@@ -151,7 +151,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(101, 124);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 24);
+            this.label4.Size = new System.Drawing.Size(75, 19);
             this.label4.TabIndex = 28;
             this.label4.Text = "Отчество:";
             // 
@@ -160,7 +160,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(101, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 24);
+            this.label3.Size = new System.Drawing.Size(73, 19);
             this.label3.TabIndex = 27;
             this.label3.Text = "Фамилия:";
             // 
@@ -179,7 +179,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(101, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 24);
+            this.label1.Size = new System.Drawing.Size(40, 19);
             this.label1.TabIndex = 19;
             this.label1.Text = "Имя:";
             // 
@@ -194,10 +194,10 @@
             this.tabCliets.Controls.Add(this.label6);
             this.tabCliets.Controls.Add(this.buttonAddClient);
             this.tabCliets.Controls.Add(this.label7);
-            this.tabCliets.Location = new System.Drawing.Point(4, 33);
+            this.tabCliets.Location = new System.Drawing.Point(4, 28);
             this.tabCliets.Name = "tabCliets";
             this.tabCliets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCliets.Size = new System.Drawing.Size(998, 189);
+            this.tabCliets.Size = new System.Drawing.Size(998, 194);
             this.tabCliets.TabIndex = 1;
             this.tabCliets.Text = "Клиенты";
             this.tabCliets.UseVisualStyleBackColor = true;
@@ -208,7 +208,7 @@
             this.textPatronymicClient.Mask = "???????????????";
             this.textPatronymicClient.Name = "textPatronymicClient";
             this.textPatronymicClient.PromptChar = ' ';
-            this.textPatronymicClient.Size = new System.Drawing.Size(227, 31);
+            this.textPatronymicClient.Size = new System.Drawing.Size(227, 26);
             this.textPatronymicClient.TabIndex = 40;
             // 
             // textSurnameClient
@@ -217,7 +217,7 @@
             this.textSurnameClient.Mask = "???????????????";
             this.textSurnameClient.Name = "textSurnameClient";
             this.textSurnameClient.PromptChar = ' ';
-            this.textSurnameClient.Size = new System.Drawing.Size(227, 31);
+            this.textSurnameClient.Size = new System.Drawing.Size(227, 26);
             this.textSurnameClient.TabIndex = 39;
             // 
             // textNameClient
@@ -226,7 +226,7 @@
             this.textNameClient.Mask = "???????????????";
             this.textNameClient.Name = "textNameClient";
             this.textNameClient.PromptChar = ' ';
-            this.textNameClient.Size = new System.Drawing.Size(227, 31);
+            this.textNameClient.Size = new System.Drawing.Size(227, 26);
             this.textNameClient.TabIndex = 38;
             // 
             // textModelCarClient
@@ -235,7 +235,7 @@
             this.textModelCarClient.Mask = "aaaaaaaaaaaaaaaaaaaaaaaaa";
             this.textModelCarClient.Name = "textModelCarClient";
             this.textModelCarClient.PromptChar = ' ';
-            this.textModelCarClient.Size = new System.Drawing.Size(350, 31);
+            this.textModelCarClient.Size = new System.Drawing.Size(350, 26);
             this.textModelCarClient.TabIndex = 37;
             // 
             // label2
@@ -243,7 +243,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(101, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 24);
+            this.label2.Size = new System.Drawing.Size(75, 19);
             this.label2.TabIndex = 35;
             this.label2.Text = "Отчество:";
             // 
@@ -252,7 +252,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(101, 64);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 24);
+            this.label5.Size = new System.Drawing.Size(73, 19);
             this.label5.TabIndex = 34;
             this.label5.Text = "Фамилия:";
             // 
@@ -261,7 +261,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(101, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 24);
+            this.label6.Size = new System.Drawing.Size(40, 19);
             this.label6.TabIndex = 31;
             this.label6.Text = "Имя:";
             // 
@@ -280,7 +280,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(359, 2);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 24);
+            this.label7.Size = new System.Drawing.Size(98, 19);
             this.label7.TabIndex = 26;
             this.label7.Text = "Модель авто:";
             // 
@@ -291,10 +291,10 @@
             this.tabServices.Controls.Add(this.label9);
             this.tabServices.Controls.Add(this.buttonAddService);
             this.tabServices.Controls.Add(this.label12);
-            this.tabServices.Location = new System.Drawing.Point(4, 33);
+            this.tabServices.Location = new System.Drawing.Point(4, 28);
             this.tabServices.Name = "tabServices";
             this.tabServices.Padding = new System.Windows.Forms.Padding(3);
-            this.tabServices.Size = new System.Drawing.Size(998, 189);
+            this.tabServices.Size = new System.Drawing.Size(998, 194);
             this.tabServices.TabIndex = 2;
             this.tabServices.Text = "Услуги";
             this.tabServices.UseVisualStyleBackColor = true;
@@ -305,7 +305,7 @@
             this.textNameService.Mask = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             this.textNameService.Name = "textNameService";
             this.textNameService.PromptChar = ' ';
-            this.textNameService.Size = new System.Drawing.Size(374, 31);
+            this.textNameService.Size = new System.Drawing.Size(374, 26);
             this.textNameService.TabIndex = 44;
             // 
             // textPriceService
@@ -317,7 +317,7 @@
             0,
             0});
             this.textPriceService.Name = "textPriceService";
-            this.textPriceService.Size = new System.Drawing.Size(120, 31);
+            this.textPriceService.Size = new System.Drawing.Size(120, 26);
             this.textPriceService.TabIndex = 43;
             // 
             // label9
@@ -325,7 +325,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(321, 66);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 24);
+            this.label9.Size = new System.Drawing.Size(47, 19);
             this.label9.TabIndex = 42;
             this.label9.Text = "Цена:";
             // 
@@ -344,7 +344,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(321, 3);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(201, 24);
+            this.label12.Size = new System.Drawing.Size(163, 19);
             this.label12.TabIndex = 39;
             this.label12.Text = "Наименование услуги:";
             // 
@@ -355,14 +355,14 @@
             this.BackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // BackToolStripMenuItem
             // 
             this.BackToolStripMenuItem.Name = "BackToolStripMenuItem";
-            this.BackToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.BackToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.BackToolStripMenuItem.Text = "Назад";
             this.BackToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
@@ -385,7 +385,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(741, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(204, 24);
+            this.label10.Size = new System.Drawing.Size(166, 19);
             this.label10.TabIndex = 10;
             this.label10.Text = "Число строк в таблице:";
             // 
@@ -394,15 +394,15 @@
             this.counterTable.AutoSize = true;
             this.counterTable.Location = new System.Drawing.Point(943, 3);
             this.counterTable.Name = "counterTable";
-            this.counterTable.Size = new System.Drawing.Size(17, 24);
+            this.counterTable.Size = new System.Drawing.Size(14, 19);
             this.counterTable.TabIndex = 9;
             this.counterTable.Text = "-";
             // 
             // AddForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 721);
+            this.ClientSize = new System.Drawing.Size(1008, 730);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.counterTable);
             this.Controls.Add(this.dataGridView);
